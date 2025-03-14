@@ -1,0 +1,277 @@
+/* 
+  GLOBAL STYLES
+  This file defines the overall appearance of the site, including sections, forms, carousels,
+  and the language toggle styles.
+*/
+
+/* ----- GLOBAL ----- */
+body {
+    font-family: Verdana, sans-serif; /* Default font */
+    color: #E0E5EC; /* Light text for dark background */
+    margin: 0;
+    padding: 0;
+
+    /* Espace en haut pour ne pas cacher le contenu sous le header fixe */
+    padding-top: 100px; /* Ajustez selon la hauteur réelle de votre header */
+}
+
+/* ----- SECTIONS ----- */
+section {
+    background: rgba(30, 42, 56, 0.85);
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+}
+
+/* Presentation sections for both languages */
+#presentation-fr,
+#presentation-en {
+    text-align: center;
+    font-size: 18px;
+    background: rgba(44, 62, 80, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 950px;
+}
+
+/* ----- HEADER ----- */
+header {
+    background-color: rgba(30, 42, 56, 0.9);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+    /* Rend le header fixe en haut de la page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Pour qu'il soit au-dessus du contenu */
+}
+
+header h1 {
+    color: #00C9FF;
+    margin: 0; /* Pour éviter un espace supplémentaire */
+}
+
+/* ----- NAVIGATION ----- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0; /* Espace sous le titre */
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav a {
+    color: #E0E5EC;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Headings */
+h2 {
+    color: #00C9FF;
+}
+
+/* ----- ABOUT & LISTS ----- */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+.skills, .tools {
+    list-style: none;
+    padding: 0;
+}
+.skills li, .tools li {
+    background: rgba(30, 42, 56, 0.9);
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+.skills li:hover, .tools li:hover {
+    background: #2A3D5C;
+    padding-left: 20px;
+}
+.skills li:hover::after, .tools li:hover::after {
+    content: attr(data-level) "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #00C9FF;
+}
+
+/* ----- PROJECT IMAGES & CAROUSEL ----- */
+.project-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+.project-images img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 10px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.project-images img:hover {
+    transform: scale(1.05);
+    border-color: #00C9FF;
+}
+
+/* ----- FORM ----- */
+.contact-form {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: left;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.form-group button {
+    padding: 10px 20px;
+    background-color: #00C9FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-group button:hover {
+    background-color: #00A5D9;
+}
+
+/* ----- FOOTER ----- */
+footer {
+    background-color: rgba(30, 42, 56, 0.9);
+    padding: 10px;
+    text-align: center;
+    color: #E0E5EC;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ----- CAROUSEL STYLES ----- */
+#projects-fr .carousel,
+#projects-en .carousel {
+    background: rgba(30, 42, 56, 0.85);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-top: 20px;
+}
+#projects-fr .carousel-item,
+#projects-fr .carousel-item *,
+#projects-en .carousel-item,
+#projects-en .carousel-item * {
+    color: #E0E5EC !important;
+}
+#projects-fr .carousel a,
+#projects-en .carousel a {
+    color: #E0E5EC !important;
+    text-decoration: none;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* ----- LANGUAGE TOGGLE ----- */
+.lang {
+    display: none;
+}
+.lang.active {
+    display: block;
+}
+
+/* Le bouton de changement de langue est lui aussi fixé,
+   avec un z-index plus élevé pour être au-dessus du header */
+#lang-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1100;
+}
+#toggle-button {
+    background-color: #00C9FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+#toggle-button:hover {
+    background-color: #00A5D9;
+}
+
+/* ----- RESPONSIVE STYLES FOR MOBILE ----- */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        /* Ajustez si le header est moins haut sur mobile */
+        padding-top: 80px;
+    }
+    section {
+        padding: 20px;
+        margin: 10px auto;
+        max-width: 95%;
+    }
+    header {
+        padding: 10px;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+    nav ul {
+        padding: 0;
+    }
+    #presentation-fr,
+    #presentation-en {
+        padding: 20px;
+        font-size: 16px;
+    }
+    .contact-form {
+        max-width: 90%;
+    }
+    #projects-fr .carousel,
+    #projects-en .carousel {
+        padding: 10px;
+    }
+    .project-images img {
+        max-width: 100%;
+        margin: 5px 0;
+    }
+}

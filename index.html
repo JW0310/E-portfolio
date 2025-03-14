@@ -1,0 +1,467 @@
+<!--
+  This is the main HTML document for my digital portfolio.
+  It contains both the French and English versions, a language toggle button,
+  a carousel for the projects, and an embedded PDF of my CV.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Set character encoding and viewport for responsive design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title of the site -->
+  <title>Mon E-Portfolio / My E-Portfolio</title>
+
+    <!-- Bootstrap 5 CDN for prebuilt components like the carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <!-- Link to the custom CSS file -->
+  <link rel="stylesheet" href="CSS/style.css">
+  
+  <!-- Inline style to set the background image -->
+  <style>
+    /* The background image is centered, covers the whole screen and remains fixed */
+    body {
+      background: url('Image/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Language toggle button positioned at the top-right -->
+  <div id="lang-toggle">
+    <button id="toggle-button" onclick="toggleLanguage()">English</button>
+  </div>
+  
+  <!-- ================================================= -->
+  <!-- FRENCH CONTENT: visible by default (class "active") -->
+  <!-- ================================================= -->
+  <div id="content-fr" class="lang active">
+    <!-- HEADER: Site title and navigation -->
+    <header>
+      <h1>Bienvenue sur mon portfolio numérique</h1>
+      <nav>
+        <ul>
+          <li><a href="#about-fr">À propos</a></li>
+          <li><a href="#parcours-fr">Parcours</a></li>
+          <li><a href="#projects-fr">Projets</a></li>
+          <li><a href="#contact-fr">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- PRESENTATION SECTION -->
+    <section id="presentation-fr">
+      <h2>Pourquoi ce portfolio numérique ?</h2>
+      <p>
+        Ce portfolio numérique a pour objectif de mettre en avant mon parcours, mes compétences et mes réalisations dans le domaine des données.
+        Il regroupe les différents projets que j’ai réalisés, tant académiques que professionnels, afin de démontrer mon savoir-faire et mon évolution.
+        Vous y trouverez des détails sur mes expériences, mes outils de travail et les compétences développées.
+      </p>
+    </section>
+    
+    <!-- ABOUT SECTION -->
+    <section id="about-fr">
+      <h2>À propos</h2>
+      <h3>Présentation personnelle</h3>
+      <p>
+        Je suis Justin Walmé, étudiant en Bachelor Universitaire de Technologie en Science des Données à l'Institut Universitaire de Technologie Paris Rives de Seine.
+        Passionné par l'analyse et la visualisation des données, je m'intéresse particulièrement à la gestion, l’exploitation et à la qualité des données dans divers contextes.
+        J’aime transformer des données brutes en informations exploitables pour faciliter la prise de décision.
+      </p>
+      
+      <!-- Skills, Tools, and Language Skills with hover effect -->
+      <h3>Compétences</h3>
+      <ul class="skills">
+        <li data-level="90">Analyse statistique pour la prise de décision</li>
+        <li data-level="85">Gestion de la qualité des données</li>
+        <li data-level="80">Exploitation et nettoyage de données</li>
+        <li data-level="75">Reporting et visualisation de données</li>
+        <li data-level="70">Programmation statistique (R, Python, SQL)</li>
+      </ul>
+      
+      <h3>Outils</h3>
+      <ul class="tools">
+        <li data-level="95">Excel (Tableaux croisés dynamiques, Power Query)</li>
+        <li data-level="85">Power BI</li>
+        <li data-level="80">Python (Pandas, NumPy, Matplotlib)</li>
+        <li data-level="75">SQL</li>
+        <li data-level="70">R (ggplot2, dplyr)</li>
+        <li data-level="65">SAS</li>
+      </ul>
+      
+      <h3>Compétences linguistiques</h3>
+      <ul class="skills">
+        <li data-level="Langue maternelle">Français</li>
+        <li data-level="B1">Espagnol</li>
+        <li data-level="B2">Anglais</li>
+      </ul>
+    </section>
+    
+    <!-- EXPERIENCE SECTION -->
+    <section id="parcours-fr">
+      <h2>Parcours</h2>
+      <h3>Diplômes</h3>
+      <ul>
+        <li><strong>Bachelor Universitaire de Technologie en Science des Données</strong> - Institut Universitaire de Technologie Paris Rives de Seine (Actuel)</li>
+        <li><strong>Baccalauréat</strong> Scientifique</li>
+      </ul>
+      <h3>Expériences professionnelles</h3>
+      <ul>
+        <li>
+          <strong>Alternance Consultant Power BI</strong> chez IMMO - Mousquetaires pour 2 ans.<br>
+          Immo Mousquetaires est la branche immobilière du groupement Les Mousquetaires, acteur majeur de la distribution en France, spécialisé dans la gestion et le développement des actifs commerciaux.
+        </li>
+      </ul>
+    </section>
+    
+    <!-- PROJECTS SECTION WITH CAROUSEL (FR) -->
+    <section id="projects-fr" class="container my-5">
+      <h2>Projets</h2>
+      <!-- Bootstrap carousel to showcase projects -->
+      <div id="carouselProjects" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+          
+          <!-- Slide 1: Detailed NBA Project -->
+          <div class="carousel-item active">
+            <div class="p-4">
+              <h3>Analyse des performances de la ligue de basketball nord-américaine avec Power BI</h3>
+              <p><strong>Contexte :</strong> Ce projet consiste à analyser en profondeur les performances des équipes et des joueurs de la NBA à l'aide de Power BI.</p>
+              <p><strong>Démarche :</strong></p>
+              <ul>
+                <li>Collecte et agrégation de données issues de sources multiples (statistiques de matchs, performances individuelles, etc.).</li>
+                <li>Nettoyage et préparation des données pour assurer leur qualité.</li>
+                <li>Création de visualisations interactives pour mettre en évidence les tendances et comparer les performances.</li>
+                <li>Élaboration de rapports détaillés offrant des recommandations stratégiques.</li>
+              </ul>
+              <p>
+                Ce projet a été réalisé en plusieurs étapes, de l'extraction des données à la présentation finale, permettant ainsi d'identifier rapidement les forces et faiblesses des équipes.
+              </p>
+              <div class="project-images">
+                <img src="Image/nba_dashboard1.jpg" alt="Dashboard NBA 1">
+                <img src="Image/nba_dashboard2.jpg" alt="Dashboard NBA 2">
+                <img src="Image/nba_dashboard3.jpg" alt="Dashboard NBA 3">
+              </div>
+              <div class="project-details">
+                <h4>Détails du projet</h4>
+                <p>
+                  Réalisé avec Power BI, ce projet intègre l'ensemble du processus d'analyse : extraction, transformation et visualisation. 
+                  L'objectif était d'offrir un outil décisionnel capable d'identifier des tendances clés et de proposer des recommandations pour améliorer les performances sportives.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 2: E-Portfolio Creation Project -->
+          <div class="carousel-item">
+            <div class="p-4">
+              <h3>Création de l'E-Portfolio</h3>
+              <p><strong>Contexte :</strong> Ce projet consistait à concevoir et réaliser ce site d'e-portfolio afin de présenter mon parcours, mes compétences et mes projets de manière interactive.</p>
+              <p><strong>Étapes clés et démarche :</strong></p>
+              <ul>
+                <li><strong>Octobre - Décembre 2024 :</strong> Formation en communication et définition du cahier des charges :
+                  <ul>
+                    <li>Identification des objectifs du site et des besoins en information.</li>
+                    <li>Rédaction d’un cahier des charges détaillé avec maquettes, wireframes et schémas d'architecture.</li>
+                    <li>Étude de l'ergonomie et conception de l'expérience utilisateur.</li>
+                  </ul>
+                </li>
+                <li><strong>Janvier - Février 2025 :</strong> Formation en développement web (HTML/CSS) et réalisation du site :
+                  <ul>
+                    <li>Conception du design basé sur les wireframes validés.</li>
+                    <li>Intégration du contenu (textes, images, vidéos) dans le site.</li>
+                    <li>Tests et ajustements pour garantir compatibilité et réactivité.</li>
+                  </ul>
+                </li>
+              </ul>
+              <p>
+                Ce projet a permis d’allier communication et développement web, aboutissant à un travail collaboratif itératif basé sur un cahier des charges précis.
+              </p>
+              <div class="project-images">
+                <img src="Image/architecture.jpg" alt="Maquette de l'architecture du site">
+                <img src="Image/code.jpg" alt="Capture de code dans SublimeText">
+              </div>
+              <p>
+                Ci-dessus, la maquette de l’architecture et une capture de code depuis SublimeText illustrent le processus de conception et d’intégration.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjects" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjects" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Suivant</span>
+        </button>
+      </div>
+    </section>
+    
+    <!-- CONTACT SECTION (FR) -->
+    <section id="contact-fr">
+      <h2>Contact</h2>
+      <h3>Références</h3>
+      <p>Remerciements aux professeurs et mentors ayant contribué à mon parcours.</p>
+      <h3>Hyperliens</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/justin-walme-4ab0a62b7" target="_blank">🔗 LinkedIn : Justin Walmé</a></li>
+        <li><a href="mailto:walmejustin@gmail.com">✉️ walmejustin@gmail.com</a></li>
+      </ul>
+      <!-- Embedding the CV PDF directly into the page -->
+      <h3>Mon CV</h3>
+      <iframe src="document/CV_Justin_WALME.pdf" width="100%" height="600px">
+        Votre navigateur ne supporte pas l'affichage inline des PDF. 
+        Veuillez télécharger le PDF : <a href="CV_Justin_WALME.pdf">Télécharger le CV</a>.
+      </iframe>
+    </section>
+    
+    <!-- CONTACT FORM (FR) -->
+    <section id="trace-fr">
+      <h2>Laissez une trace de votre passage</h2>
+      <p>Envie de laisser une trace de votre passage ? Veuillez indiquer votre nom et un commentaire ci-dessous.</p>
+      <form action="#" method="post" class="contact-form">
+        <div class="form-group">
+          <label for="nom-fr">Nom :</label>
+          <input type="text" id="nom-fr" name="nom" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <label for="commentaire-fr">Commentaire :</label>
+          <textarea id="commentaire-fr" name="commentaire" rows="4" placeholder="Votre commentaire" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Envoyer</button>
+        </div>
+      </form>
+    </section>
+    
+    <!-- FOOTER (FR) -->
+    <footer>
+      <p>&copy; 2025 - Mon Portfolio Numérique</p>
+    </footer>
+  </div> <!-- FIN DU CONTENU FRANÇAIS -->
+  
+  <!-- ================================================= -->
+  <!-- ENGLISH CONTENT: Hidden by default -->
+  <!-- ================================================= -->
+  <div id="content-en" class="lang">
+    <header>
+      <h1>Welcome to my digital portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about-en">About</a></li>
+          <li><a href="#parcours-en">Experience</a></li>
+          <li><a href="#projects-en">Projects</a></li>
+          <li><a href="#contact-en">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <section id="presentation-en">
+      <h2>Why this digital portfolio?</h2>
+      <p>
+        This portfolio aims to showcase my background, skills, and achievements in the field of data.
+        It gathers various projects I have completed, both academic and professional, to demonstrate my expertise and growth.
+      </p>
+    </section>
+    
+    <section id="about-en">
+      <h2>About</h2>
+      <h3>Personal Introduction</h3>
+      <p>
+        I am Justin Walmé, a student in the University Technology Bachelor's program in Data Science at the Institut Universitaire de Technologie Paris Rives de Seine.
+        Passionate about data analysis and visualization, I focus on data management, exploitation, and quality.
+        I enjoy transforming raw data into actionable insights to facilitate decision-making.
+      </p>
+      
+      <h3>Skills</h3>
+      <ul class="skills">
+        <li data-level="90">Statistical analysis for decision-making</li>
+        <li data-level="85">Data quality management</li>
+        <li data-level="80">Data cleaning and processing</li>
+        <li data-level="75">Reporting and data visualization</li>
+        <li data-level="70">Statistical programming (R, Python, SQL)</li>
+      </ul>
+      
+      <h3>Tools</h3>
+      <ul class="tools">
+        <li data-level="95">Excel (Pivot tables, Power Query)</li>
+        <li data-level="85">Power BI</li>
+        <li data-level="80">Python (Pandas, NumPy, Matplotlib)</li>
+        <li data-level="75">SQL</li>
+        <li data-level="70">R (ggplot2, dplyr)</li>
+        <li data-level="65">SAS</li>
+      </ul>
+      
+      <h3>Language Skills</h3>
+      <ul class="skills">
+        <li data-level="Native">French</li>
+        <li data-level="B1">Spanish</li>
+        <li data-level="B2">English</li>
+      </ul>
+    </section>
+    
+    <section id="parcours-en">
+      <h2>Experience</h2>
+      <h3>Education</h3>
+      <ul>
+        <li><strong>University Technology Bachelor's in Data Science</strong> - Institut Universitaire de Technologie Paris Rives de Seine (Current)</li>
+        <li><strong>Baccalaureate</strong> (Scientific)</li>
+      </ul>
+      <h3>Professional Experience</h3>
+      <ul>
+        <li>
+          <strong>Apprenticeship as a Power BI Consultant</strong> at IMMO - Mousquetaires for 2 years.<br>
+          Immo Mousquetaires is the real estate branch of the Les Mousquetaires group, a major player in French retail, specializing in managing and developing commercial assets.
+        </li>
+      </ul>
+    </section>
+    
+    <!-- PROJECTS SECTION (EN) -->
+    <section id="projects-en" class="container my-5">
+      <h2>Projects</h2>
+      <div id="carouselProjectsEn" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+          <!-- Slide 1: NBA Project -->
+          <div class="carousel-item active">
+            <div class="p-4">
+              <h3>Analysis of the North American Basketball League using Power BI</h3>
+              <p><strong>Context:</strong> This project involves an in-depth analysis of team and player performance using Power BI.</p>
+              <p><strong>Process:</strong></p>
+              <ul>
+                <li>Collecting and aggregating data from various sources (match statistics, individual performance, etc.).</li>
+                <li>Cleaning and preparing data to ensure its quality.</li>
+                <li>Creating interactive visualizations to highlight trends and compare performances.</li>
+                <li>Developing reports with strategic recommendations.</li>
+              </ul>
+              <p>
+                The project was carried out in several stages, from data extraction to the final presentation, enabling a quick identification of strengths and weaknesses.
+              </p>
+              <div class="project-images">
+                <img src="Image/nba_dashboard1.jpg" alt="NBA Dashboard 1">
+                <img src="Image/nba_dashboard2.jpg" alt="NBA Dashboard 2">
+                <img src="Image/nba_dashboard3.jpg" alt="NBA Dashboard 3">
+              </div>
+              <div class="project-details">
+                <h4>Project details</h4>
+                <p>
+                  Developed using Power BI, this project encompasses the entire data analysis process: extraction, transformation, and visualization.
+                  It serves as a decision-making tool by identifying key trends and offering strategic recommendations.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2: E-Portfolio Creation Project -->
+          <div class="carousel-item">
+            <div class="p-4">
+              <h3>Creation of the E-Portfolio</h3>
+              <p><strong>Context:</strong> This project involved designing and building this e-portfolio website to showcase my background, skills, and projects interactively.</p>
+              <p><strong>Key steps and process:</strong></p>
+              <ul>
+                <li><strong>October - December 2024:</strong> Communication training and defining the project requirements:
+                  <ul>
+                    <li>Identifying website objectives and necessary information.</li>
+                    <li>Developing a detailed specification document with mockups and wireframes.</li>
+                    <li>Focusing on ergonomics and user experience.</li>
+                  </ul>
+                </li>
+                <li><strong>January - February 2025:</strong> Web development training (HTML/CSS) and website creation:
+                  <ul>
+                    <li>Designing the website based on validated wireframes.</li>
+                    <li>Integrating content (text, images, videos) into the site.</li>
+                    <li>Testing and adjustments to ensure compatibility and responsiveness.</li>
+                  </ul>
+                </li>
+              </ul>
+              <p>
+                This project combined communication and web development skills, resulting in an interactive e-portfolio built from a precise specification document.
+              </p>
+              <div class="project-images">
+                <img src="Image/architecture.jpg" alt="Site Architecture Mockup">
+                <img src="Image/code.jpg" alt="SublimeText Code Capture">
+              </div>
+              <p>
+                The images above show the site architecture mockup and a code capture from SublimeText, illustrating both the overall design and the actual implementation.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjectsEn" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjectsEn" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    
+    <!-- CONTACT SECTION (EN) -->
+    <section id="contact-en">
+      <h2>Contact</h2>
+      <h3>References</h3>
+      <p>Thanks to the professors and mentors who contributed to my journey.</p>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/justin-walme-4ab0a62b7" target="_blank">🔗 LinkedIn : Justin Walmé</a></li>
+        <li><a href="mailto:walmejustin@gmail.com">✉️ walmejustin@gmail.com</a></li>
+      </ul>
+      <!-- Embedding the CV PDF in English -->
+      <h3>My CV</h3>
+      <iframe src="document/CV_Justin_WALME_Anglais.pdf" width="100%" height="600px">
+        Your browser does not support inline PDF viewing. Please download the PDF: 
+        <a href="CV_Justin_WALME.pdf">Download CV</a>.
+      </iframe>
+    </section>
+    
+    <!-- CONTACT FORM (EN) -->
+    <section id="trace-en">
+      <h2>Leave a Trace</h2>
+      <p>If you would like to leave a trace of your visit, please provide your name and a comment below.</p>
+      <form action="#" method="post" class="contact-form">
+        <div class="form-group">
+          <label for="nom-en">Name:</label>
+          <input type="text" id="nom-en" name="nom" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="commentaire-en">Comment:</label>
+          <textarea id="commentaire-en" name="commentaire" rows="4" placeholder="Your comment" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </section>
+    
+    <!-- FOOTER (EN) -->
+    <footer>
+      <p>&copy; 2025 - My Digital Portfolio</p>
+    </footer>
+  </div> <!-- FIN DU CONTENU EN ANGLAIS -->
+  
+  <!-- Bootstrap JS (CDN) for carousel functionality -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Language toggle script: switches the visibility of French and English content -->
+  <script>
+    function toggleLanguage() {
+      var frContent = document.getElementById('content-fr');
+      var enContent = document.getElementById('content-en');
+      var button = document.getElementById('toggle-button');
+      if (frContent.classList.contains('active')) {
+        frContent.classList.remove('active');
+        enContent.classList.add('active');
+        button.innerText = 'Français';
+      } else {
+        enContent.classList.remove('active');
+        frContent.classList.add('active');
+        button.innerText = 'English';
+      }
+    }
+  </script>
+</body>
+</html>
