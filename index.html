@@ -223,7 +223,13 @@
     <section id="trace-fr">
       <h2>Laissez une trace de votre passage</h2>
       <p>Envie de laisser une trace de votre passage ? Veuillez indiquer votre nom et un commentaire ci-dessous.</p>
-      <form action="#" method="post" class="contact-form">
+      <form action="#" method="post" data-netlify="true" name="contact" class="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+        <!-- Optionnel : champ honeypot pour lutter contre le spam -->
+        <p style="display:none;">
+          <label>Ne remplissez pas si vous n'êtes pas humain : <input name="bot-field"></label>
+        </p>
+        
         <div class="form-group">
           <label for="nom-fr">Nom :</label>
           <input type="text" id="nom-fr" name="nom" placeholder="Votre nom" required>
@@ -422,14 +428,20 @@
     <section id="trace-en">
       <h2>Leave a Trace</h2>
       <p>If you would like to leave a trace of your visit, please provide your name and a comment below.</p>
-      <form action="#" method="post" class="contact-form">
+      <form action="#" method="post" data-netlify="true" name="contact" class="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+        <!-- Optionnel : champ honeypot pour lutter contre le spam -->
+        <p style="display:none;">
+          <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
+        
         <div class="form-group">
-          <label for="nom-en">Name:</label>
-          <input type="text" id="nom-en" name="nom" placeholder="Your name" required>
+          <label for="nom-fr">Name :</label>
+          <input type="text" id="nom-fr" name="nom" placeholder="Votre nom" required>
         </div>
         <div class="form-group">
-          <label for="commentaire-en">Comment:</label>
-          <textarea id="commentaire-en" name="commentaire" rows="4" placeholder="Your comment" required></textarea>
+          <label for="commentaire-fr">Comment :</label>
+          <textarea id="commentaire-fr" name="commentaire" rows="4" placeholder="Votre commentaire" required></textarea>
         </div>
         <div class="form-group">
           <button type="submit">Send</button>
