@@ -1,692 +1,588 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mon E-Portfolio / My E-Portfolio</title>
-
-  <!-- Bootstrap 5 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
-
-  <!-- Leaflet (carte) -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="CSS/style.css"/>
-
-  <!-- Fond -->
-  <style>
-    body {
-      background: url('Image/background.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justin Walme | Data Science Portfolio</title>
+  <meta name="description" content="E-portfolio data de Justin Walme, etudiant en science des donnees et consultant Power BI en alternance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/data-cockpit.css">
 </head>
 <body>
-  <!-- Toggles Langue & Thème -->
-  <div id="lang-toggle"><button id="toggle-button" onclick="toggleLanguage()">English</button></div>
-  <div id="theme-toggle"><button id="theme-button" aria-label="Basculer clair/sombre" title="Clair / Sombre">🌙</button></div>
+  <div class="page-shell">
+    <header class="topbar" aria-label="Navigation principale">
+      <a class="brand-lockup" href="#top" aria-label="Retour a l'accueil">
+        <img class="brand-mark" src="Image/moi.jpeg" alt="Photo de Justin Walme">
+        <span>
+          <strong>Justin Walme</strong>
+          <small>Data cockpit</small>
+        </span>
+      </a>
 
-  <!-- ================== FR ================== -->
-  <div id="content-fr" class="lang active">
-    <header>
-      <h1>Bienvenue sur mon portfolio numérique</h1>
-      <nav>
-        <ul>
-          <li><a href="#about-fr">À propos</a></li>
-          <li><a href="#parcours-fr">Parcours</a></li>
-          <li><a href="#projects-fr">Projets</a></li>
-          <li><a href="#contact-fr">Contact</a></li>
-        </ul>
+      <nav class="main-nav" aria-label="Sections">
+        <a href="#profile">Profil</a>
+        <a href="#skills">Stack</a>
+        <a href="#timeline">Parcours</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <div class="header-actions">
-        <button class="btn btn-outline-light btn-sm" onclick="window.print()">📄 Télécharger le portfolio en PDF</button>
+
+      <div class="toolbar">
+        <button class="icon-button" type="button" id="languageToggle" aria-label="Changer la langue" title="Langue">
+          <i data-lucide="languages"></i>
+          <span>EN</span>
+        </button>
+        <a class="icon-button" href="document/CV_Justin_WALME.pdf" download aria-label="Telecharger le CV" title="CV">
+          <i data-lucide="file-down"></i>
+          <span>CV</span>
+        </a>
       </div>
     </header>
 
-    <section id="presentation-fr">
-      <h2>Pourquoi ce portfolio numérique ?</h2>
-      <p>
-        Ce portfolio numérique a pour objectif de mettre en avant mon parcours, mes compétences et mes réalisations dans le domaine des données.
-        Il regroupe les différents projets que j’ai réalisés, tant académiques que professionnels, afin de démontrer mon savoir-faire et mon évolution.
-      </p>
-    </section>
+    <main id="top">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-showcase" aria-hidden="true">
+          <img src="Image/DataCenter.jpg" alt="">
+          <div class="hero-reflection"></div>
+        </div>
 
-    <section id="about-fr">
-      <h2>À propos</h2>
-      <h3>Présentation personnelle</h3>
-      <p>
-        Je suis Justin Walmé, étudiant en Bachelor Universitaire de Technologie en Science des Données à l'IUT Paris Rives de Seine.
-        Passionné par l'analyse et la visualisation des données, je m'intéresse particulièrement à la gestion, l’exploitation et à la qualité des données.
-      </p>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="status-dot"></span>
+              <span class="fr">Actuellement en recherche d'alternance data / BI</span>
+              <span class="en">Currently looking for a data / BI apprenticeship</span>
+            </p>
+            <h1 id="hero-title">
+              <span class="fr">Transformer les donnees en decisions lisibles.</span>
+              <span class="en">Turning data into readable decisions.</span>
+            </h1>
+            <p class="hero-lede">
+              <span class="fr">Etudiant en BUT Science des Donnees a l'IUT Paris Rives de Seine et consultant Power BI en alternance chez IMMO Mousquetaires, je recherche actuellement une nouvelle alternance orientee data, BI et systemes d'information.</span>
+              <span class="en">Data Science student at IUT Paris Rives de Seine and Power BI consultant apprentice at IMMO Mousquetaires, I am currently looking for a new apprenticeship focused on data, BI and information systems.</span>
+            </p>
+            <div class="hero-actions">
+              <a class="primary-action" href="#projects">
+                <i data-lucide="bar-chart-3"></i>
+                <span class="fr">Explorer les projets</span>
+                <span class="en">Explore projects</span>
+              </a>
+              <a class="secondary-action" href="mailto:walmejustin@gmail.com">
+                <i data-lucide="send"></i>
+                <span class="fr">Me contacter</span>
+                <span class="en">Contact me</span>
+              </a>
+            </div>
+          </div>
 
-      <h3>Compétences</h3>
-      <ul class="skills">
-        <li data-level="90">Analyse statistique pour la prise de décision</li>
-        <li data-level="85">Gestion de la qualité des données</li>
-        <li data-level="80">Exploitation et nettoyage de données</li>
-        <li data-level="75">Reporting et visualisation de données</li>
-        <li data-level="70">Programmation statistique (R, Python, SQL)</li>
-      </ul>
+          <aside class="command-panel" aria-label="Indicateurs de profil">
+            <div class="panel-header">
+              <span class="fr">INDICATEURS_PROFIL</span>
+              <span class="en">PROFILE_METRICS</span>
+              <strong>
+                <span class="fr">Vue active</span>
+                <span class="en">Live view</span>
+              </strong>
+            </div>
+            <div class="metric-grid">
+              <div class="metric">
+                <span class="fr">Projets</span>
+                <span class="en">Projects</span>
+                <strong>04</strong>
+                <small>BI / Web / SNCF / Communication</small>
+              </div>
+              <div class="metric">
+                <span class="fr">Alternance</span>
+                <span class="en">Apprenticeship</span>
+                <strong>OPEN</strong>
+                <small>
+                  <span class="fr">Recherche active</span>
+                  <span class="en">Active search</span>
+                </small>
+              </div>
+              <div class="metric">
+                <span class="fr">Competences techniques</span>
+                <span class="en">Technical skills</span>
+                <strong>10+</strong>
+                <small>Power BI, SQL, Python, R</small>
+              </div>
+              <div class="metric">
+                <span class="fr">Langues</span>
+                <span class="en">Languages</span>
+                <strong>FR/EN</strong>
+                <small>
+                  <span class="fr">Portfolio bilingue</span>
+                  <span class="en">Bilingual portfolio</span>
+                </small>
+              </div>
+            </div>
+            <div class="signal-strip" aria-hidden="true">
+              <span style="--value: 72%"></span>
+              <span style="--value: 88%"></span>
+              <span style="--value: 54%"></span>
+              <span style="--value: 96%"></span>
+              <span style="--value: 64%"></span>
+              <span style="--value: 80%"></span>
+              <span style="--value: 43%"></span>
+              <span style="--value: 91%"></span>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-      <h3>Outils</h3>
-      <ul class="tools">
-        <li data-level="95">Excel (TCD, Power Query)</li>
-        <li data-level="85">Power BI</li>
-        <li data-level="80">Python (Pandas, NumPy, Matplotlib)</li>
-        <li data-level="75">SQL</li>
-        <li data-level="70">R (ggplot2, dplyr)</li>
-        <li data-level="65">SAS</li>
-      </ul>
-
-      <h3>Compétences linguistiques</h3>
-      <ul class="skills">
-        <li data-level="Langue maternelle">Français</li>
-        <li data-level="B1">Espagnol</li>
-        <li data-level="B2">Anglais</li>
-      </ul>
-    </section>
-
-    <!-- PARCOURS (ordre : Bac -> BUT -> Alternance) -->
-    <section id="parcours-fr">
-      <h2>Parcours</h2>
-      <div class="timeline">
-        <!-- 1) Baccalauréat -->
-        <div class="timeline-item left">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <h3>Baccalauréat Scientifique</h3>
-            <p><strong>Terminale S</strong></p>
-            <p>Base scientifique solide : mathématiques, statistiques et logique.</p>
+      <section class="content-band" id="profile" aria-labelledby="profile-title">
+        <div class="section-heading">
+          <p class="section-kicker">01 / PROFILE</p>
+          <h2 id="profile-title">
+            <span class="fr">Un profil oriente exploitation, qualite et visualisation des donnees.</span>
+            <span class="en">A profile focused on data processing, quality and visualization.</span>
+          </h2>
+        </div>
+        <div class="profile-layout">
+          <div class="text-panel">
+            <p class="fr">Je suis Justin Walme, etudiant en troisieme annee de BUT Science des Donnees. Mon parcours combine formation statistique, projets appliques et experience en entreprise autour de la Business Intelligence. Chez IMMO Mousquetaires, je participe au developpement de dashboards Power BI, a l'automatisation de flux ETL avec Power Query, a la modelisation des donnees et a la creation de KPI en DAX.</p>
+            <p class="fr">Je suis egalement admissible au Master Management des Systemes d'Information et des Data a l'EMLV, une poursuite d'etudes qui correspond a mon envie de croiser vision metier, pilotage SI et exploitation avancee de la donnee.</p>
+            <p class="fr">Dans cette continuite, je suis actuellement en recherche d'une alternance pour poursuivre mon developpement sur des missions de BI, de preparation de donnees, de reporting et de pilotage par la donnee.</p>
+            <p class="fr">Mon projet professionnel est d'evoluer vers des fonctions liees au pilotage des systemes d'information et de la donnee : consultant BI, analyste SI ou chef de projet data. J'aime relier la technique a la decision : nettoyer, structurer, mesurer, visualiser, puis expliquer.</p>
+            <p class="en">I am Justin Walme, a third-year Data Science student. My background combines statistical training, applied projects and professional experience in Business Intelligence. At IMMO Mousquetaires, I contribute to Power BI dashboards, ETL automation with Power Query, data modeling and DAX KPI creation.</p>
+            <p class="en">I have also been admitted to the Master's program in Management of Information Systems and Data at EMLV, a path aligned with my goal of combining business vision, information systems management and advanced data use.</p>
+            <p class="en">In that continuity, I am currently looking for an apprenticeship to keep developing through BI, data preparation, reporting and data-driven management missions.</p>
+            <p class="en">My professional goal is to move toward roles connected to information systems and data management: BI consultant, IS analyst or data project manager. I enjoy connecting technical work to decision-making: cleaning, structuring, measuring, visualizing and explaining.</p>
+          </div>
+          <div class="focus-list" aria-label="Domaines de specialisation">
+            <article>
+              <i data-lucide="database"></i>
+              <h3>Data management</h3>
+              <p>ETL, controle qualite, structure de donnees, preparation analytique.</p>
+            </article>
+            <article>
+              <i data-lucide="pie-chart"></i>
+              <h3>Business intelligence</h3>
+              <p>Power BI, Power Query, DAX, modelisation, preparation des donnees, reporting et experience utilisateur.</p>
+            </article>
+            <article>
+              <i data-lucide="code-2"></i>
+              <h3>Analytics coding</h3>
+              <p>Python, SQL, R, DAX et langage M, avec une utilisation forte en complement de la BI notamment sur la preparation des donnees lourdes.</p>
+            </article>
+            <article>
+              <i data-lucide="presentation"></i>
+              <h3>Communication metier</h3>
+              <p>Restitution orale, redaction de rapports et accompagnement des utilisateurs.</p>
+            </article>
           </div>
         </div>
-        <!-- 2) BUT -->
-        <div class="timeline-item right">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <h3>BUT Science des Données</h3>
-            <p><strong>IUT Paris Rives de Seine</strong> — 2023 → Actuel</p>
-            <p>Projets concrets : ETL, modélisation en étoile, DAX, Power BI, Python.</p>
+      </section>
+
+      <section class="content-band alt-band" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="section-kicker">02 / TECH STACK</p>
+          <h2 id="skills-title">
+            <span class="fr">Competences mesurees comme un tableau de bord.</span>
+            <span class="en">Skills mapped like an analytical dashboard.</span>
+          </h2>
+        </div>
+
+        <div class="skills-dashboard">
+          <div class="skills-column">
+            <h3>Data & BI</h3>
+            <div class="skill-row" style="--score: 98%">
+              <span>Power BI / Power Query / DAX</span>
+              <strong>98</strong>
+            </div>
+            <div class="skill-row" style="--score: 90%">
+              <span>Excel</span>
+              <strong>90</strong>
+            </div>
+            <div class="skill-row" style="--score: 82%">
+              <span>Python data stack</span>
+              <strong>82</strong>
+            </div>
+            <div class="skill-row" style="--score: 75%">
+              <span>SQL / R</span>
+              <strong>75</strong>
+            </div>
+            <div class="skill-row" style="--score: 70%">
+              <span>Dataiku / MyReport</span>
+              <strong>70</strong>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <h3>Analysis</h3>
+            <div class="skill-row" style="--score: 99%">
+              <span>Reporting BI</span>
+              <strong>99</strong>
+            </div>
+            <div class="skill-row" style="--score: 95%">
+              <span>Nettoyage des donnees</span>
+              <strong>95</strong>
+            </div>
+            <div class="skill-row" style="--score: 95%">
+              <span>Qualite des donnees</span>
+              <strong>95</strong>
+            </div>
+            <div class="skill-row" style="--score: 90%">
+              <span>Reporting</span>
+              <strong>90</strong>
+            </div>
+            <div class="skill-row" style="--score: 65%">
+              <span>Gestion de projet</span>
+              <strong>65</strong>
+            </div>
+          </div>
+
+          <div class="language-panel">
+            <h3>Languages</h3>
+            <div class="language-grid">
+              <span><strong>FR</strong> Native</span>
+              <span><strong>EN</strong> B1</span>
+              <span><strong>ES</strong> A2</span>
+            </div>
           </div>
         </div>
-        <!-- 3) Alternance -->
-        <div class="timeline-item left">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <h3>Alternance — Consultant Power BI</h3>
-            <p><strong>IMMO Mousquetaires</strong> — 2 ans</p>
-            <p>Rapports interactifs, qualité des données, optimisation de modèles et mesures, support métiers.</p>
+      </section>
+
+      <section class="content-band" id="timeline" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <p class="section-kicker">03 / DATA PIPELINE</p>
+          <h2 id="timeline-title">
+            <span class="fr">Un parcours construit comme une montee en competence progressive.</span>
+            <span class="en">A path built as a progressive skills pipeline.</span>
+          </h2>
+        </div>
+
+        <div class="pipeline">
+          <article class="pipeline-step">
+            <span class="step-index">01</span>
+            <div>
+              <h3>Baccalaureat scientifique</h3>
+              <p class="fr">Bases solides en mathematiques, logique et raisonnement statistique.</p>
+              <p class="en">Strong foundations in mathematics, logic and statistical reasoning.</p>
+            </div>
+          </article>
+          <article class="pipeline-step">
+            <span class="step-index">02</span>
+            <div>
+              <h3>BUT Science des Donnees</h3>
+              <p>IUT Paris Rives de Seine - 2023 a aujourd'hui</p>
+              <p class="fr">ETL, modelisation, visualisation, Python, R, SQL et projets appliques.</p>
+              <p class="en">ETL, modeling, visualization, Python, R, SQL and applied projects.</p>
+            </div>
+          </article>
+          <article class="pipeline-step">
+            <span class="step-index">03</span>
+            <div>
+              <h3>Alternance - Consultant Power BI</h3>
+              <p>IMMO Mousquetaires - 10/2024 a 09/2026</p>
+              <p class="fr">Developpement de dashboards Power BI, schemas en etoile, flux ETL Power Query, mesures DAX et collaboration avec les equipes metier.</p>
+              <p class="en">Power BI dashboards, star schemas, Power Query ETL flows, DAX measures and collaboration with business teams.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-band alt-band" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="section-kicker">04 / PROJECTS</p>
+            <h2 id="projects-title">
+              <span class="fr">Preuves concretes, livrables et methodes.</span>
+              <span class="en">Concrete proof, deliverables and methods.</span>
+            </h2>
+          </div>
+          <div class="filter-tabs" role="list" aria-label="Filtres projet">
+            <button type="button" class="active" data-filter="all">All</button>
+            <button type="button" data-filter="data">Data</button>
+            <button type="button" data-filter="web">Web</button>
+            <button type="button" data-filter="communication">Com</button>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Carte FR -->
-    <section id="map-fr-section">
-      <h2>Carte — Études & Expérience</h2>
-      <p>Localisation de mon IUT et de mon alternance.</p>
-      <div id="map-fr" style="height: 360px; border-radius: 10px; overflow: hidden;"></div>
-    </section>
+        <div class="project-grid">
+          <article class="project-card" data-category="data">
+            <img src="Image/nba_dashboard1.JPG" alt="Apercu du tableau de bord NBA Power BI">
+            <div class="project-body">
+              <div class="project-meta-line">
+                <span>Power BI</span>
+                <span>ETL</span>
+                <span>DAX</span>
+              </div>
+              <h3>Analyse NBA avec Power BI</h3>
+              <p class="fr">Dashboard interactif construit a partir d'un processus ETL complet, avec modelisation et recommandations.</p>
+              <p class="en">Interactive dashboard based on a complete ETL process, with modeling and recommendations.</p>
+              <button type="button" class="project-link" data-dialog="nbaDialog">
+                <span class="fr">Voir le detail</span>
+                <span class="en">View details</span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
 
-    <!-- PROJETS -->
-    <section id="projects-fr" class="container my-5">
-      <h2>Projets</h2>
+          <article class="project-card" data-category="data">
+            <img src="Image/SNCF-p1.jpeg" alt="Apercu du tableau de bord SNCF">
+            <div class="project-body">
+              <div class="project-meta-line">
+                <span>Power BI</span>
+                <span>Excel</span>
+                <span>ETL</span>
+              </div>
+              <h3>Etude SNCF - incidents materiel roulant</h3>
+              <p class="fr">Projet 2025-2026 autour de l'interpretation, du nettoyage et de la modelisation de donnees d'incidents, avec analyse Excel et Power BI.</p>
+              <p class="en">2025-2026 project focused on interpreting, cleaning and modeling incident data, with Excel and Power BI analysis.</p>
+              <button type="button" class="project-link" data-dialog="sncfDialog">
+                <span class="fr">Voir le detail</span>
+                <span class="en">View details</span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
 
-      <div class="projects-grid">
-        <!-- NBA -->
-        <article class="project-card" data-bs-toggle="modal" data-bs-target="#projNBAfr" role="button" aria-label="Ouvrir le détail du projet NBA" tabindex="0">
-          <img src="Image/nba_dashboard1.jpg" alt="Aperçu du tableau de bord NBA">
-          <div class="project-card_body">
-            <h3>Analyse NBA avec Power BI</h3>
-            <p>Exploration des performances équipes et joueurs, visualisations, recommandations.</p>
-            <span class="project-card_tag">Power BI</span>
-          </div>
-        </article>
+          <article class="project-card" data-category="web">
+            <img src="Image/architecture.JPG" alt="Architecture du site e-portfolio">
+            <div class="project-body">
+              <div class="project-meta-line">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>UX</span>
+              </div>
+              <h3>Creation de l'e-portfolio</h3>
+              <p class="fr">Conception d'un portfolio numerique, structure de page, ergonomie, accessibilite et responsive design.</p>
+              <p class="en">Digital portfolio design, page structure, usability, accessibility and responsive design.</p>
+              <button type="button" class="project-link" data-dialog="portfolioDialog">
+                <span class="fr">Voir le detail</span>
+                <span class="en">View details</span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
 
-        <!-- E‑portfolio -->
-        <article class="project-card" data-bs-toggle="modal" data-bs-target="#projEPortfoliFr" role="button" aria-label="Ouvrir le détail du projet E‑Portfolio" tabindex="0">
-          <img src="Image/architecture.jpg" alt="Maquette d’architecture du site d’e‑portfolio">
-          <div class="project-card_body">
-            <h3>Création de l’e‑portfolio</h3>
-            <p>Conception, intégration, accessibilité et ergonomie.</p>
-            <span class="project-card_tag">HTML/CSS</span>
-          </div>
-        </article>
+          <article class="project-card" data-category="communication">
+            <img src="Image/animation_poster.png" alt="Affiche du projet d'animation sur l'apprentissage des langues">
+            <div class="project-body">
+              <div class="project-meta-line">
+                <span>Storyboard</span>
+                <span>Research</span>
+                <span>Video</span>
+              </div>
+              <h3>Animation - Apprendre une langue</h3>
+              <p class="fr">Projet de communication visant a deconstruire un stereotype par une animation courte et argumentee.</p>
+              <p class="en">Communication project debunking a stereotype through a short evidence-based animation.</p>
+              <button type="button" class="project-link" data-dialog="animationDialog">
+                <span class="fr">Voir le detail</span>
+                <span class="en">View details</span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
 
-        <!-- Animation / Communication -->
-        <article class="project-card" data-bs-toggle="modal" data-bs-target="#projAnimFr" role="button" aria-label="Ouvrir le détail du projet Animation Langues" tabindex="0">
-          <img src="Image/animation_poster.png" alt="Illustration du projet d’animation">
-          <div class="project-card_body">
-            <h3>Animation — Faut‑il être jeune pour apprendre une langue ?</h3>
-            <p>Déconstruction d’un stéréotype via une animation courte.</p>
-            <span class="project-card_tag">Communication</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTACT + FORM FR -->
-    <section id="contact-fr">
-      <h2>Contact</h2>
-      <h3>Hyperliens</h3>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/justin-walme-4ab0a62b7" target="_blank">🔗 LinkedIn : Justin Walmé</a></li>
-        <li><a href="mailto:walmejustin@gmail.com">✉️ walmejustin@gmail.com</a></li>
-      </ul>
-      <h3>Mon CV</h3>
-      <iframe src="document/CV_Justin_WALME.pdf" width="100%" height="600px" loading="lazy">
-        Votre navigateur ne supporte pas l'affichage inline des PDF. 
-        Veuillez télécharger le PDF : <a href="CV_Justin_WALME.pdf">Télécharger le CV</a>.
-      </iframe>
-    </section>
-
-    <section id="trace-fr">
-      <h2>Laissez une trace de votre passage</h2>
-      <p>Envie de laisser une trace de votre passage ? Veuillez indiquer votre nom et un commentaire ci-dessous.</p>
-      <form method="post" data-netlify="true" name="contact" class="contact-form">
-        <input type="hidden" name="form-name" value="contact">
-        <p style="display:none;">
-          <label>Ne remplissez pas si vous n'êtes pas humain : <input name="bot-field"></label>
-        </p>
-        <div class="form-group">
-          <label for="nom-fr">Nom :</label>
-          <input type="text" id="nom-fr" name="nom" placeholder="Votre nom" required>
         </div>
-        <div class="form-group">
-          <label for="commentaire-fr">Commentaire :</label>
-          <textarea id="commentaire-fr" name="commentaire" rows="4" placeholder="Votre commentaire" required></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit">Envoyer</button>
-        </div>
-      </form>
-    </section>
+      </section>
 
-    <footer><p>&copy; 2025 - Mon Portfolio Numérique</p></footer>
+      <section class="content-band contact-band" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="section-kicker">05 / CONTACT</p>
+          <h2 id="contact-title">
+            <span class="fr">Pret a parler donnees, reporting ou alternance.</span>
+            <span class="en">Ready to talk about data, reporting or apprenticeship work.</span>
+          </h2>
+        </div>
+        <div class="contact-grid">
+          <a href="mailto:walmejustin@gmail.com">
+            <i data-lucide="mail"></i>
+            <span>walmejustin@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/justin-walme-4ab0a62b7" target="_blank" rel="noreferrer">
+            <i data-lucide="linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="document/CV_Justin_WALME.pdf" download>
+            <i data-lucide="file-text"></i>
+            <span class="fr">CV francais</span>
+            <span class="en">French resume</span>
+          </a>
+          <a href="document/CV_Justin_WALME_Anglais.pdf" download>
+            <i data-lucide="file-text"></i>
+            <span class="fr">CV anglais</span>
+            <span class="en">English resume</span>
+          </a>
+        </div>
+
+        <form method="post" data-netlify="true" name="portfolio-contact-data" class="contact-form">
+          <input type="hidden" name="form-name" value="portfolio-contact-data">
+          <p class="hidden-field">
+            <label>Ne pas remplir : <input name="bot-field"></label>
+          </p>
+          <div class="form-intro">
+            <span class="section-kicker">MESSAGE_INPUT</span>
+            <h3>
+              <span class="fr">Laisser une trace ou proposer un echange.</span>
+              <span class="en">Leave a note or suggest a conversation.</span>
+            </h3>
+          </div>
+          <div class="form-grid">
+            <label>
+              <span class="fr">Nom</span>
+              <span class="en">Name</span>
+              <input type="text" name="nom" autocomplete="name" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email">
+            </label>
+          </div>
+          <label>
+            <span class="fr">Message</span>
+            <span class="en">Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="primary-action" type="submit">
+            <i data-lucide="send"></i>
+            <span class="fr">Envoyer</span>
+            <span class="en">Send</span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Justin Walme - Data Science Portfolio</span>
+      <a href="#top">Back to top</a>
+    </footer>
   </div>
 
-  <!-- ================== EN ================== -->
-  <div id="content-en" class="lang">
-    <header>
-      <h1>Welcome to my digital portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="#about-en">About</a></li>
-          <li><a href="#parcours-en">Experience</a></li>
-          <li><a href="#projects-en">Projects</a></li>
-          <li><a href="#contact-en">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="btn btn-outline-light btn-sm" onclick="window.print()">📄 Download portfolio as PDF</button>
-      </div>
-    </header>
-
-    <section id="presentation-en">
-      <h2>Why this digital portfolio?</h2>
-      <p>
-        This portfolio showcases my background, skills, and achievements in data. It compiles academic
-        and professional projects to demonstrate my expertise and growth.
-      </p>
-    </section>
-
-    <section id="about-en">
-      <h2>About</h2>
-      <h3>Personal Introduction</h3>
-      <p>
-        I am Justin Walmé, a Data Science student at IUT Paris Rives de Seine. I focus on data management,
-        analysis and visualization, turning raw data into actionable insights.
-      </p>
-
-      <h3>Skills</h3>
-      <ul class="skills">
-        <li data-level="90">Statistical analysis for decision-making</li>
-        <li data-level="85">Data quality management</li>
-        <li data-level="80">Data cleaning and processing</li>
-        <li data-level="75">Reporting and data visualization</li>
-        <li data-level="70">Statistical programming (R, Python, SQL)</li>
-      </ul>
-
-      <h3>Tools</h3>
-      <ul class="tools">
-        <li data-level="95">Excel (Pivot tables, Power Query)</li>
-        <li data-level="85">Power BI</li>
-        <li data-level="80">Python (Pandas, NumPy, Matplotlib)</li>
-        <li data-level="75">SQL</li>
-        <li data-level="70">R (ggplot2, dplyr)</li>
-        <li data-level="65">SAS</li>
-      </ul>
-
-      <h3>Language Skills</h3>
-      <ul class="skills">
-        <li data-level="Native">French</li>
-        <li data-level="B1">Spanish</li>
-        <li data-level="B2">English</li>
-      </ul>
-    </section>
-
-    <!-- EXPERIENCE (order fixed) -->
-    <section id="parcours-en">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <!-- 1) Baccalaureate -->
-        <div class="timeline-item left">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <h3>Scientific Baccalaureate</h3>
-            <p><strong>High school diploma</strong></p>
-            <p>Strong foundations in maths, statistics and logic.</p>
-          </div>
-        </div>
-        <!-- 2) Bachelor (BUT) -->
-        <div class="timeline-item right">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <h3>Bachelor of Technology — Data Science</h3>
-            <p><strong>IUT Paris Rives de Seine</strong> — 2023 → Current</p>
-            <p>Hands‑on training in ETL, star schema modeling, DAX, dashboards and Python.</p>
-          </div>
-        </div>
-        <!-- 3) Apprenticeship -->
-        <div class="timeline-item left">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <h3>Apprenticeship — Power BI Consultant</h3>
-            <p><strong>IMMO Mousquetaires</strong> — 2 years</p>
-            <p>Interactive reporting, data quality, model optimization, business support.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Carte EN -->
-    <section id="map-en-section">
-      <h2>Map — Studies & Experience</h2>
-      <p>Locations of my university and apprenticeship.</p>
-      <div id="map-en" style="height: 360px; border-radius: 10px; overflow: hidden;"></div>
-    </section>
-
-    <!-- PROJECTS EN -->
-    <section id="projects-en" class="container my-5">
-      <h2>Projects</h2>
-
-      <div class="projects-grid">
-        <!-- NBA -->
-        <article class="project-card" data-bs-toggle="modal" data-bs-target="#projNBAen" role="button" aria-label="Open NBA project details" tabindex="0">
-          <img src="Image/nba_dashboard1.jpg" alt="NBA dashboard preview">
-          <div class="project-card_body">
-            <h3>NBA Analysis with Power BI</h3>
-            <p>Team and player performance, interactive visuals and recommendations.</p>
-            <span class="project-card_tag">Power BI</span>
-          </div>
-        </article>
-
-        <!-- E‑portfolio -->
-        <article class="project-card" data-bs-toggle="modal" data-bs-target="#projEPortfolioEn" role="button" aria-label="Open E‑Portfolio project details" tabindex="0">
-          <img src="Image/architecture.jpg" alt="E‑portfolio site architecture mockup">
-          <div class="project-card_body">
-            <h3>E‑Portfolio Creation</h3>
-            <p>Design, integration, accessibility and ergonomics.</p>
-            <span class="project-card_tag">HTML/CSS</span>
-          </div>
-        </article>
-
-        <!-- Animation -->
-        <article class="project-card" data-bs-toggle="modal" data-bs-target="#projAnimEn" role="button" aria-label="Open Languages Animation project details" tabindex="0">
-          <img src="Image/animation_poster.png" alt="Animation project illustration">
-          <div class="project-card_body">
-            <h3>Animation — Do you have to be young to learn a language?</h3>
-            <p>Debunking a common stereotype through a short animation.</p>
-            <span class="project-card_tag">Communication</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTACT + FORM EN -->
-    <section id="contact-en">
-      <h2>Contact</h2>
-      <h3>Links</h3>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/justin-walme-4ab0a62b7" target="_blank">🔗 LinkedIn : Justin Walmé</a></li>
-        <li><a href="mailto:walmejustin@gmail.com">✉️ walmejustin@gmail.com</a></li>
-      </ul>
-      <h3>My CV</h3>
-      <iframe src="document/CV_Justin_WALME_Anglais.pdf" width="100%" height="600px" loading="lazy">
-        Your browser does not support inline PDF viewing. Please download the PDF: 
-        <a href="CV_Justin_WALME.pdf">Download CV</a>.
-      </iframe>
-    </section>
-
-    <section id="trace-en">
-      <h2>Leave a Trace</h2>
-      <p>If you would like to leave a trace of your visit, please provide your name and a comment below.</p>
-      <form method="post" data-netlify="true" name="contact-en" class="contact-form">
-        <input type="hidden" name="form-name" value="contact-en">
-        <p style="display:none;">
-          <label>Don't fill this out if you're human: <input name="bot-field"></label>
-        </p>
-        <div class="form-group">
-          <label for="name-en">Name :</label>
-          <input type="text" id="name-en" name="name" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label for="comment-en">Comment :</label>
-          <textarea id="comment-en" name="comment" rows="4" placeholder="Your comment" required></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit">Send</button>
-        </div>
-      </form>
-    </section>
-
-    <footer><p>&copy; 2025 - My Digital Portfolio</p></footer>
-  </div>
-
-  <!-- ===================== MODALES PROJETS (HORS .lang) ===================== -->
-
-  <!-- FR — NBA -->
-  <div class="modal fade" id="projNBAfr" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">Analyse des performances NBA avec Power BI</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-        </div>
-        <div class="modal-body">
-          <div class="project-meta">
-            <h4>Contexte & Méthodologie</h4>
-            <p><strong>Contexte :</strong> Réalisation d'un dashboard intéractif sur Power BI en suivant un procéssus ETL complet.</p>
-            <p><strong>Méthodologie :</strong> Mise en place du processus ETL (Power Query), dans un premier temps nous avons été cherché une source de données NBA sur le site open source Kaggle, ensuite on a chargé ces données dans Power Query pour les traiter et les transformer en vérifiant tout ce qui est doublon, valeurs aberrantes et format. Création du modèle en contséllation avec une table de mesure en DAX pour les indicateurs. Enfin la création du Dashboard avec un design attirant reprenant les couleurs et le thème de la NBA.</p>
-            <p><strong>Retour d'expérience :</strong> Ce qui m'a le plus marqué, c'est à quel point le modèle de données est important lorsque l'on utilise un processus ETL. Tout doit bien être structuré avec les bonnes relations et cardinalités.</p>
-          </div>
-          <div class="ratio ratio-16x9 mb-3">
-            <video controls preload="metadata" poster="Image/nba_dashboard1.jpg" playsinline>
-              <source src="https://github.com/JW0310/E-portfolio/releases/download/assets-v2/Demo.PBI.mp4" type="video/mp4">
-              Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
-            </video>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a class="btn btn-primary" href="document/Rapport_SAE_SID.pbix" download>Télécharger le livrable (PBIX)</a>
-          <a class="btn btn-outline-light" href="document/Rapport SAE SID.pdf" download>Télécharger le rapport (PDF)</a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-        </div>
-      </div>
+  <dialog class="project-dialog" id="nbaDialog">
+    <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
+    <h2>Analyse NBA avec Power BI</h2>
+    <p>Projet de dashboard interactif construit avec un processus ETL : recuperation des donnees, nettoyage dans Power Query, modelisation, mesures DAX et construction du rapport.</p>
+    <div class="dialog-video">
+      <video controls preload="metadata" poster="Image/nba_dashboard1.JPG" playsinline>
+        <source src="https://github.com/JW0310/E-portfolio/releases/download/assets-v2/Demo.PBI.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la lecture video HTML5.
+      </video>
     </div>
-  </div>
-
-  <!-- FR — E‑portfolio -->
-  <div class="modal fade" id="projEPortfoliFr" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">Création de l’e‑portfolio</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-        </div>
-        <div class="modal-body">
-          <div class="project-meta">
-            <h4>Contexte & Méthodologie</h4>
-            <p><strong>Contexte :</strong> Réaliser un portfolio au format numérique en HTML/CSS. Le portfolio doit inclure une présentation de soi, de son parcours, des projets réalisés au cour des années de BUT et une évaluation de la maîtrise des compétences et outils.</p>
-            <p><strong>Méthodologie :</strong> La première étape était de rédiger un cahier des charges sur les attendus et rendu du site avec une maquette des différentes sections. Codage du site en HTML/CSS avec quelques éléments de la librairie Bootstrap et enfin mettre en place l'accessibilité du site via Netlify accessibilité et la responsivité pour les utilisateurs consultant le site sur smartphone.</p>
-            <p><strong>Retour d'expérience :</strong> L'apprentissage du language HTML/CSS est plutôt ludique, et je vais continuer à mettre à jour mon portfolio pour qu'il me serve plus tard.</p>
-          </div>
-          <div class="project-images">
-            <img src="Image/architecture.jpg" alt="Architecture du site">
-            <img src="Image/code.jpg" alt="Capture de code">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-        </div>
-      </div>
+    <div class="dialog-actions">
+      <a href="document/Rapport_SAE_SID.pbix" download>PBIX</a>
+      <a href="document/Rapport SAE SID.pdf" download>Rapport PDF</a>
     </div>
-  </div>
+  </dialog>
 
-  <!-- FR — Animation -->
-  <div class="modal fade" id="projAnimFr" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">Animation — Faut‑il être jeune pour apprendre une langue ?</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-        </div>
-        <div class="modal-body">
-          <div class="project-meta">
-            <h4>Contexte & Méthodologie</h4>
-            <p><strong>Contexte :</strong> Réaliser en groupe, une animation sur un support au choix, cette animation doit traiter sur le sujet d'un stéréotype choisit et vu en classe.</p>
-            <p><strong>Méthodologie :</strong> Dans un premier temps il a fallu faire des recherches en linguistique/neurologie/pédagogie. Une fois les informations récupéré, nous avons mit en place une storyboard qui retrace le stéréotype, les avis de professionnels, des résultats d'études et des faits. L'enregistrement et le montage ont été les parties les plus importantes du projet car il fallait parlé avec le bon ton pour l'enregistrement et arrivé à faire un montage qui donne envie au personne de regarder l'animation sans forcément en avoir les compétences.</p>
-            <p><strong>Message clé :</strong> L’âge modifie la manière d’apprendre, pas la possibilité d’apprendre.</p>
-          </div>
-          <div class="ratio ratio-16x9 mb-3">
-            <video controls preload="metadata" poster="Image/animation_poster.png" playsinline>
-              <source src="https://github.com/JW0310/E-portfolio/releases/download/assets-v1/Animation.mp4" type="video/mp4">
-              Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
-            </video>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a class="btn btn-outline-light" href="document/Texte_animation.pdf" download>Voir le texte (PDF)</a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-        </div>
-      </div>
+  <dialog class="project-dialog" id="portfolioDialog">
+    <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
+    <h2>Creation de l'e-portfolio</h2>
+    <p>Conception d'un portfolio en HTML/CSS : cahier des charges, maquette, integration, accessibilite, responsive design et mise en valeur des projets.</p>
+    <div class="dialog-image-row">
+      <img src="Image/architecture.JPG" alt="Architecture du site">
+      <img src="Image/code.JPG" alt="Capture de code">
     </div>
-  </div>
+  </dialog>
 
-  <!-- EN — NBA -->
-  <div class="modal fade" id="projNBAen" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">NBA Performance Analysis with Power BI</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="project-meta">
-            <h4>Context & Method</h4>
-            <p><strong>Context:</strong> Creation of an interactive dashboard in Power BI by following a complete ETL process.</p>
-            <p><strong>Method:</strong> Implementation of the ETL process (Power Query): first, we sourced NBA data from the open-source platform Kaggle, then loaded this data into Power Query to clean and transform it, checking for duplicates, outliers, and formatting issues. We then built a constellation schema model with a dedicated DAX measures table for the indicators. Finally, we designed the dashboard with an attractive layout inspired by the NBA’s colors and theme.</p>
-            <p><strong>Lessons learned:</strong> What struck me the most was how important the data model is when using an ETL process. Everything must be well-structured with the right relationships and cardinalities.</p>
-          </div>
-          <div class="ratio ratio-16x9 mb-3">
-            <video controls preload="metadata" poster="Image/nba_dashboard1.jpg" playsinline>
-              <source src="https://github.com/JW0310/E-portfolio/releases/download/assets-v2/Demo.PBI.mp4" type="video/mp4">
-              Your browser does not support HTML5 video playback.
-            </video>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a class="btn btn-primary" href="document/Rapport_SAE_SID.pbix" download>Download deliverable (PBIX)</a>
-          <a class="btn btn-outline-light" href="document/Rapport SAE SID.pdf" download>Download report (PDF)</a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
+  <dialog class="project-dialog" id="sncfDialog">
+    <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
+    <h2>Etude SNCF - incidents et defauts du materiel roulant</h2>
+    <p class="fr">Projet mene de novembre 2025 a janvier 2026 : plan d'action, interpretation et nettoyage des donnees, integration de fichiers fournis par la SNCF, puis creation d'un tableau de bord Power BI organise autour des incidents, des temps de resolution et des defaillances materielles.</p>
+    <p class="en">Project conducted from November 2025 to January 2026: action plan, data interpretation and cleaning, integration of files provided by SNCF, then creation of a Power BI dashboard focused on incidents, resolution times and equipment failures.</p>
+    <div class="dialog-image-row sncf-gallery">
+      <img src="Image/SNCF-p1.jpeg" alt="Page 1 du tableau de bord SNCF">
+      <img src="Image/SNCF-p2.jpeg" alt="Page 2 du tableau de bord SNCF">
+      <img src="Image/SNCF-p3.jpeg" alt="Page 3 du tableau de bord SNCF">
     </div>
-  </div>
-
-  <!-- EN — E‑portfolio -->
-  <div class="modal fade" id="projEPortfolioEn" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">E‑Portfolio Creation</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="project-meta">
-            <h4>Context & Method</h4>
-            <p><strong>Context:</strong> Create a digital portfolio in HTML/CSS. The portfolio must include a self-presentation, an overview of your background, the projects completed during the years of the BUT program, and an assessment of your mastery of skills and tools.</p>
-            <p><strong>Method:</strong> The first step was to draft a project brief outlining the expectations and deliverables of the site, along with a mock-up of the different sections. Then came the coding of the site in HTML/CSS with a few elements from the Bootstrap library, and finally setting up the site’s accessibility via Netlify, as well as ensuring responsiveness for users viewing the site on a smartphone.</p>
-            <p><strong>Lessons learned:</strong> Learning HTML/CSS is quite fun, and I will continue to update my portfolio so that it can be useful to me in the future.</p>
-          </div>
-          <div class="project-images">
-            <img src="Image/architecture.jpg" alt="Site architecture">
-            <img src="Image/code.jpg" alt="Code capture">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
+    <div class="dialog-actions">
+      <a href="#contact">Me contacter pour en parler</a>
     </div>
-  </div>
+  </dialog>
 
-  <!-- EN — Animation -->
-  <div class="modal fade" id="projAnimEn" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">Animation — Do you have to be young to learn a language?</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="project-meta">
-            <h4>Context & Method</h4>
-            <p><strong>Context:</strong> Work as a group to create an animation using a medium of your choice. This animation must address a stereotype selected and studied in class.</p>
-            <p><strong>Method:</strong> First, we had to conduct research in linguistics, neurology, and pedagogy. Once the information was gathered, we developed a storyboard that outlined the stereotype, professional opinions, study results, and factual information. Recording and editing were the most important parts of the project, as it was necessary to speak with the right tone during the recording and to produce an edit that would make people want to watch the animation, even if they did not necessarily have expertise in the subject.</p>
-            <p><strong>Key message:</strong> Age changes how we learn, not whether we can.</p>
-          </div>
-          <div class="ratio ratio-16x9 mb-3">
-            <video controls preload="metadata" poster="Image/animation_poster.png" playsinline>
-              <source src="https://github.com/JW0310/E-portfolio/releases/download/assets-v1/Animation.mp4" type="video/mp4">
-              Your browser does not support HTML5 video playback.
-            </video>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a class="btn btn-outline-light" href="document/Texte_animation.pdf" download>View script (PDF)</a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
+  <dialog class="project-dialog" id="animationDialog">
+    <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
+    <h2>Animation - Faut-il etre jeune pour apprendre une langue ?</h2>
+    <p>Projet de groupe combinant recherches, storyboard, enregistrement et montage pour expliquer que l'age modifie la maniere d'apprendre, pas la possibilite d'apprendre.</p>
+    <div class="dialog-video">
+      <video controls preload="metadata" poster="Image/animation_poster.png" playsinline>
+        <source src="https://github.com/JW0310/E-portfolio/releases/download/assets-v1/Animation.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la lecture video HTML5.
+      </video>
     </div>
-  </div>
-  <!-- =================== FIN MODALES (HORS .lang) =================== -->
+    <div class="dialog-actions">
+      <a href="document/Texte_animation.pdf" download>Texte PDF</a>
+    </div>
+  </dialog>
 
-  <!-- JS libs -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-  <!-- Scripts app -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script>
-    // Bascule FR/EN + refresh des cartes
-    function toggleLanguage() {
-      var fr = document.getElementById('content-fr');
-      var en = document.getElementById('content-en');
-      var btn = document.getElementById('toggle-button');
-      if (fr.classList.contains('active')) {
-        fr.classList.remove('active'); en.classList.add('active'); btn.innerText = 'Français';
-      } else {
-        en.classList.remove('active'); fr.classList.add('active'); btn.innerText = 'English';
-      }
-      refreshVisibleMap();
+    const root = document.documentElement;
+    const languageToggle = document.querySelector('#languageToggle');
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const projectCards = document.querySelectorAll('.project-card');
+    const dialogButtons = document.querySelectorAll('[data-dialog]');
+
+    function setLanguage(lang) {
+      root.dataset.lang = lang;
+      root.lang = lang;
+      languageToggle.querySelector('span').textContent = lang === 'fr' ? 'EN' : 'FR';
     }
 
-    // Thème clair/sombre (doux)
-    const themeBtn = document.getElementById('theme-button');
-    function applyTheme(mode) {
-      document.body.classList.toggle('light-mode', mode === 'light');
-      themeBtn.textContent = mode === 'light' ? '☀️' : '🌙';
-    }
-    (function initTheme() {
-      const saved = localStorage.getItem('theme');
-      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-      applyTheme(saved ? saved : (prefersLight ? 'light' : 'dark'));
-    })();
-    themeBtn.addEventListener('click', () => {
-      const isLight = document.body.classList.contains('light-mode');
-      const next = isLight ? 'dark' : 'light';
-      localStorage.setItem('theme', next);
-      applyTheme(next);
+    languageToggle.addEventListener('click', () => {
+      setLanguage(root.dataset.lang === 'en' ? 'fr' : 'en');
     });
 
-    // Barres de progression (skills/tools)
-    function initMeters() {
-      const items = document.querySelectorAll('.skills li, .tools li');
-      items.forEach(li => {
-        const level = li.getAttribute('data-level');
-        if (!level) return;
-        const pct = parseInt(level, 10);
-        if (isNaN(pct)) return; // ignore non numériques (B1/B2/etc.)
-        if (li.querySelector('.skill-meter')) return;
-
-        const meter = document.createElement('div');
-        meter.className = 'skill-meter reveal';
-        const fill = document.createElement('div');
-        fill.className = 'skill-meter_fill';
-        meter.appendChild(fill);
-        li.appendChild(meter);
-        meter._targetPct = Math.max(0, Math.min(100, pct));
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        filterButtons.forEach((item) => item.classList.toggle('active', item === button));
+        projectCards.forEach((card) => {
+          card.hidden = filter !== 'all' && card.dataset.category !== filter;
+        });
       });
-    }
-    document.addEventListener('DOMContentLoaded', initMeters);
-
-    // Scroll reveal (+ anime les meters quand visibles)
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('is-visible');
-          if (e.target.classList.contains('skill-meter')) {
-            const fill = e.target.querySelector('.skill-meter_fill');
-            if (fill && typeof e.target._targetPct === 'number') {
-              requestAnimationFrame(() => { fill.style.width = e.target._targetPct + '%'; });
-            }
-          }
-        }
-      });
-    }, { threshold: 0.15 });
-
-    function tagReveal() {
-      document.querySelectorAll('section, .project-card, .project-images img, .timeline-card, .skill-meter')
-        .forEach(el => { el.classList.add('reveal'); io.observe(el); });
-    }
-    document.addEventListener('DOMContentLoaded', tagReveal);
-
-    // Cartes Leaflet
-    let mapFR, mapEN;
-    function initMaps() {
-      const IUT = [48.8417, 2.2683];   // IUT Paris Rives de Seine
-      const IMMO = [48.6160, 2.3820];  // IMMO Mousquetaires (Bondoufle)
-
-      // FR
-      const frDiv = document.getElementById('map-fr');
-      if (frDiv && !mapFR) {
-        mapFR = L.map(frDiv).setView([48.78, 2.33], 10);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19, attribution: '&copy; OpenStreetMap'
-        }).addTo(mapFR);
-        L.marker(IUT).addTo(mapFR).bindPopup('<b>IUT Paris Rives de Seine</b><br>BUT Science des Données');
-        L.marker(IMMO).addTo(mapFR).bindPopup('<b>IMMO Mousquetaires</b><br>Alternance Power BI');
-      }
-
-      // EN
-      const enDiv = document.getElementById('map-en');
-      if (enDiv && !mapEN) {
-        mapEN = L.map(enDiv).setView([48.78, 2.33], 10);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19, attribution: '&copy; OpenStreetMap'
-        }).addTo(mapEN);
-        L.marker(IUT).addTo(mapEN).bindPopup('<b>IUT Paris Rives de Seine</b><br>B.Tech Data Science');
-        L.marker(IMMO).addTo(mapEN).bindPopup('<b>IMMO Mousquetaires</b><br>Power BI Apprenticeship');
-      }
-    }
-    function refreshVisibleMap() {
-      setTimeout(() => {
-        if (document.getElementById('content-fr').classList.contains('active') && mapFR) mapFR.invalidateSize();
-        if (document.getElementById('content-en').classList.contains('active') && mapEN) mapEN.invalidateSize();
-      }, 200);
-    }
-    document.addEventListener('DOMContentLoaded', () => { initMaps(); refreshVisibleMap(); });
-
-    // Accessibilité clavier : ouvrir la modale au "Enter" sur la carte projet
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        const card = e.target.closest('.project-card');
-        if (card && card.dataset.bsTarget) {
-          const target = document.querySelector(card.dataset.bsTarget);
-          if (target) new bootstrap.Modal(target).show();
-        }
-      }
     });
+
+    dialogButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const dialog = document.getElementById(button.dataset.dialog);
+        if (dialog) dialog.showModal();
+      });
+    });
+
+    document.querySelectorAll('[data-close]').forEach((button) => {
+      button.addEventListener('click', () => button.closest('dialog').close());
+    });
+
+    document.querySelectorAll('dialog').forEach((dialog) => {
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+    });
+
+    const animatedItems = document.querySelectorAll(
+      '.hero-copy, .command-panel, .content-band, .focus-list article, .skills-column, .language-panel, .pipeline-step, .project-card, .contact-grid a, .contact-form'
+    );
+    animatedItems.forEach((item, index) => {
+      item.classList.add('scroll-reveal');
+      item.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 70}ms`);
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle('is-visible', entry.isIntersecting);
+      });
+    }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+
+    animatedItems.forEach((item) => revealObserver.observe(item));
+
+    const updateScrollState = () => {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+      root.style.setProperty('--scroll-progress', progress.toFixed(4));
+      root.style.setProperty('--scroll-shift', `${Math.round(window.scrollY * -0.08)}px`);
+    };
+    updateScrollState();
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+
+    setLanguage('fr');
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
   </script>
 </body>
 </html>
