@@ -436,19 +436,6 @@ h2 {
   gap: 20px;
 }
 
-.value-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 20px;
-  align-items: stretch;
-}
-
-.value-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-
 .skills-dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr 0.8fr;
@@ -479,32 +466,12 @@ h2 {
   background: var(--surface-soft);
 }
 
-.value-card,
-.experience-card {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface-soft);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
-}
-
-.value-card {
-  min-height: 150px;
-  padding: 22px;
-}
-
-.experience-card {
-  padding: clamp(22px, 3vw, 32px);
-}
-
-.focus-list svg,
-.value-card svg {
+.focus-list svg {
   margin-bottom: 22px;
   color: var(--lime);
 }
 
 .focus-list h3,
-.experience-card h3,
 .skills-column h3,
 .language-panel h3 {
   margin-bottom: 14px;
@@ -512,41 +479,10 @@ h2 {
 }
 
 .focus-list p,
-.value-card p,
-.experience-list,
 .pipeline-step p,
 .project-body p,
 .project-dialog p {
   color: var(--muted);
-}
-
-.value-card p {
-  margin-bottom: 0;
-}
-
-.experience-list {
-  display: grid;
-  gap: 10px;
-  margin: 18px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.experience-list li {
-  position: relative;
-  padding-left: 22px;
-}
-
-.experience-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.72em;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--teal);
-  box-shadow: 0 0 14px rgba(45, 212, 191, 0.6);
 }
 
 .skills-column,
@@ -1008,7 +944,6 @@ h2 {
 
   .hero-grid,
   .profile-layout,
-  .value-layout,
   .skills-dashboard {
     grid-template-columns: 1fr;
   }
@@ -1052,7 +987,6 @@ h2 {
 
   .metric-grid,
   .focus-list,
-  .value-grid,
   .project-grid,
   .contact-grid,
   .dialog-image-row,
