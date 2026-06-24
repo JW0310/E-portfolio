@@ -90,8 +90,8 @@
               <div class="metric">
                 <span class="fr">Projets</span>
                 <span class="en">Projects</span>
-                <strong>04</strong>
-                <small>BI / Web / SNCF / Communication</small>
+                <strong>06</strong>
+                <small>Power BI / Web / Communication</small>
               </div>
               <div class="metric">
                 <span class="fr">Alternance</span>
@@ -409,6 +409,44 @@
             </div>
           </article>
 
+          <article class="project-card" data-category="data">
+            <img src="Image/Inser pro page 1.png" alt="Page de garde du rapport Power BI sur l'insertion professionnelle">
+            <div class="project-body">
+              <div class="project-meta-line">
+                <span>Power BI</span>
+                <span>DAX</span>
+                <span>Data Viz</span>
+              </div>
+              <h3>Insertion professionnelle des diplomes</h3>
+              <p class="fr">Tableau de bord interactif sur l'insertion des diplomes : taux d'emploi, secteurs, remunerations, poursuite d'etudes et indicateurs de decision.</p>
+              <p class="en">Interactive dashboard on graduate employment: employment rates, sectors, salaries, further studies and decision-making indicators.</p>
+              <button type="button" class="project-link" data-dialog="insertionDialog">
+                <span class="fr">Voir le detail</span>
+                <span class="en">View details</span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="data">
+            <img src="Image/BTC page 1.png" alt="Page de garde du rapport Power BI sur le Bitcoin">
+            <div class="project-body">
+              <div class="project-meta-line">
+                <span>Power BI</span>
+                <span>Finance</span>
+                <span>DAX</span>
+              </div>
+              <h3>Analyse du marche du Bitcoin</h3>
+              <p class="fr">Rapport Power BI sur l'evolution du Bitcoin : tendances historiques, variations, volatilite et indicateurs financiers interactifs.</p>
+              <p class="en">Power BI report on Bitcoin evolution: historical trends, variations, volatility and interactive financial indicators.</p>
+              <button type="button" class="project-link" data-dialog="bitcoinDialog">
+                <span class="fr">Voir le detail</span>
+                <span class="en">View details</span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
+
           <article class="project-card" data-category="web">
             <img src="Image/architecture.JPG" alt="Architecture du site e-portfolio">
             <div class="project-body">
@@ -561,7 +599,7 @@
     <h2>Etude SNCF - incidents et defauts du materiel roulant</h2>
     <p class="fr">Tableau de bord Power BI sur les incidents materiels SNCF : nettoyage des donnees, suivi des temps de resolution, analyse des defaillances et construction d'indicateurs de pilotage.</p>
     <p class="en">Power BI dashboard on SNCF equipment incidents: data cleaning, resolution time monitoring, failure analysis and management indicators.</p>
-    <div class="dialog-image-row sncf-gallery">
+    <div class="dialog-image-row report-gallery">
       <img src="Image/SNCF-p1.jpeg" alt="Page 1 du tableau de bord SNCF">
       <img src="Image/SNCF-p2.jpeg" alt="Page 2 du tableau de bord SNCF">
       <img src="Image/SNCF-p3.jpeg" alt="Page 3 du tableau de bord SNCF">
@@ -571,6 +609,29 @@
         <span class="fr">Proposer un echange</span>
         <span class="en">Suggest a conversation</span>
       </a>
+    </div>
+  </dialog>
+
+  <dialog class="project-dialog" id="insertionDialog">
+    <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
+    <h2>Analyse de l'insertion professionnelle des diplomes</h2>
+    <p class="fr">Projet de Data Visualisation visant a transformer un jeu de donnees complexe en outil d'aide a la decision. Le rapport permet d'analyser les taux d'insertion, les secteurs professionnels, les remunerations, la poursuite d'etudes et differents profils de diplomes.</p>
+    <p class="en">Data Visualization project turning a complex dataset into a decision-support tool. The report analyzes employment rates, professional sectors, salaries, further studies and different graduate profiles.</p>
+    <div class="dialog-image-row report-gallery">
+      <img src="Image/Inser pro page 1.png" alt="Page 1 du rapport insertion professionnelle">
+      <img src="Image/Inser pro page 2.png" alt="Page 2 du rapport insertion professionnelle">
+    </div>
+  </dialog>
+
+  <dialog class="project-dialog" id="bitcoinDialog">
+    <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
+    <h2>Analyse du marche du Bitcoin</h2>
+    <p class="fr">Rapport interactif sur l'evolution du Bitcoin a partir de donnees financieres historiques. Le dashboard met en evidence les tendances, les periodes de croissance ou de correction, la volatilite et les principaux indicateurs financiers.</p>
+    <p class="en">Interactive report on Bitcoin evolution based on historical financial data. The dashboard highlights trends, growth and correction periods, volatility and key financial indicators.</p>
+    <div class="dialog-image-row report-gallery">
+      <img src="Image/BTC page 1.png" alt="Page 1 du rapport Bitcoin">
+      <img src="Image/BTC page 2.png" alt="Page 2 du rapport Bitcoin">
+      <img src="Image/BTC page 3.png" alt="Page 3 du rapport Bitcoin">
     </div>
   </dialog>
 

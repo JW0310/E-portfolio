@@ -896,8 +896,10 @@ h2 {
 }
 
 .dialog-video video {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
+  border: 0;
 }
 
 .dialog-actions {
@@ -926,11 +928,13 @@ h2 {
   border-radius: 8px;
 }
 
-.sncf-gallery {
+.sncf-gallery,
+.report-gallery {
   grid-template-columns: 1fr;
 }
 
-.sncf-gallery img {
+.sncf-gallery img,
+.report-gallery img {
   aspect-ratio: 16 / 9;
   object-position: top center;
 }
