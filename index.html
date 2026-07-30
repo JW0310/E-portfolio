@@ -20,7 +20,9 @@
       poster="Image/portfolio-scroll-poster.webp"
       aria-hidden="true"
       tabindex="-1"
+      webkit-playsinline
     >
+      <source src="Image/portfolio-scroll-mobile.mp4" type="video/mp4" media="(max-width: 700px)">
       <source src="Image/portfolio-scroll.webm" type="video/webm">
       <source src="Image/portfolio-scroll.mp4" type="video/mp4">
     </video>
@@ -747,13 +749,13 @@
     let frozenVideoTime = 0;
     let videoMetadataReady = false;
     let videoScrubbingFrozen = false;
+    let videoPrimed = false;
 
     const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-    const lowCapacityMobile = window.innerWidth <= 480
-      && ((connection && connection.saveData) || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4));
+    const dataSaverMode = Boolean(connection && connection.saveData);
 
     function usesStaticVideo() {
-      return reducedMotionQuery.matches || lowCapacityMobile;
+      return reducedMotionQuery.matches || dataSaverMode;
     }
 
     function setLanguage(lang) {
@@ -930,8 +932,38 @@
       queueLayoutRefresh();
     }
 
+    function removeVideoPrimeListeners() {
+      document.removeEventListener('touchstart', primeScrollVideo);
+      document.removeEventListener('pointerdown', primeScrollVideo);
+    }
+
+    function primeScrollVideo() {
+      if (videoPrimed || usesStaticVideo() || !videoMetadataReady) return;
+      videoPrimed = true;
+      const requestedTime = targetVideoTime;
+      const playRequest = scrollVideo.play();
+
+      if (playRequest && typeof playRequest.then === 'function') {
+        playRequest
+          .then(() => {
+            scrollVideo.pause();
+            scrollVideo.currentTime = requestedTime;
+            queueScrollUpdate();
+            removeVideoPrimeListeners();
+          })
+          .catch(() => {
+            videoPrimed = false;
+          });
+      } else {
+        scrollVideo.pause();
+        scrollVideo.currentTime = requestedTime;
+        removeVideoPrimeListeners();
+      }
+    }
+
     scrollVideo.addEventListener('loadedmetadata', initializeScrollVideo);
     if (scrollVideo.readyState >= 1) initializeScrollVideo();
+    scrollVideo.load();
 
     scrollVideo.addEventListener('error', () => {
       scrollVideoLayer.classList.add('has-error');
@@ -953,6 +985,9 @@
     }
 
     window.addEventListener('scroll', queueScrollUpdate, { passive: true });
+    document.addEventListener('touchmove', queueScrollUpdate, { passive: true });
+    document.addEventListener('touchstart', primeScrollVideo, { passive: true });
+    document.addEventListener('pointerdown', primeScrollVideo, { passive: true });
     window.addEventListener('resize', queueLayoutRefresh, { passive: true });
     window.addEventListener('hashchange', queueLayoutRefresh);
     window.addEventListener('load', () => {
@@ -960,6 +995,10 @@
       queueLayoutRefresh();
     });
     window.addEventListener('pageshow', queueLayoutRefresh);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('scroll', queueScrollUpdate, { passive: true });
+      window.visualViewport.addEventListener('resize', queueLayoutRefresh, { passive: true });
+    }
 
     if ('ResizeObserver' in window) {
       const layoutObserver = new ResizeObserver(queueLayoutRefresh);
