@@ -4,16 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Justin Walme | Data Science Portfolio</title>
-  <meta name="description" content="E-portfolio data de Justin Walme, etudiant en science des donnees et consultant Power BI en alternance.">
+  <meta name="description" content="E-portfolio data de Justin Walme, étudiant en science des données et consultant Power BI en alternance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body>
+<body id="top">
+  <div class="scroll-video-layer" id="scrollVideoLayer" aria-hidden="true">
+    <video
+      id="scrollVideo"
+      muted
+      playsinline
+      preload="auto"
+      poster="Image/portfolio-scroll-poster.webp"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <source src="Image/portfolio-scroll.webm" type="video/webm">
+      <source src="Image/portfolio-scroll.mp4" type="video/mp4">
+    </video>
+  </div>
+
   <div class="page-shell">
     <header class="topbar" aria-label="Navigation principale">
-      <a class="brand-lockup" href="#top" aria-label="Retour a l'accueil">
+      <a class="brand-lockup" href="#top" aria-label="Retour à l'accueil">
         <img class="brand-mark" src="Image/moi.jpeg" alt="Photo de Justin Walme">
         <span>
           <strong>Justin Walme</strong>
@@ -22,10 +37,22 @@
       </a>
 
       <nav class="main-nav" aria-label="Sections">
-        <a href="#profile">Profil</a>
-        <a href="#skills">Stack</a>
-        <a href="#timeline">Parcours</a>
-        <a href="#projects">Projets</a>
+        <a href="#profile">
+          <span class="fr">Profil</span>
+          <span class="en">Profile</span>
+        </a>
+        <a href="#skills">
+          <span class="fr">Compétences</span>
+          <span class="en">Skills</span>
+        </a>
+        <a href="#timeline">
+          <span class="fr">Parcours</span>
+          <span class="en">Journey</span>
+        </a>
+        <a href="#projects">
+          <span class="fr">Projets</span>
+          <span class="en">Projects</span>
+        </a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -34,33 +61,28 @@
           <i data-lucide="languages"></i>
           <span>EN</span>
         </button>
-        <a class="icon-button" href="document/CV_Justin_WALME.pdf" download aria-label="Telecharger le CV" title="CV">
+        <a class="icon-button" href="document/CV_Justin_WALME.pdf" download aria-label="Télécharger le CV" title="CV">
           <i data-lucide="file-down"></i>
           <span>CV</span>
         </a>
       </div>
     </header>
 
-    <main id="top">
-      <section class="hero-section" aria-labelledby="hero-title">
-        <div class="hero-showcase" aria-hidden="true">
-          <img src="Image/DataCenter.jpg" alt="">
-          <div class="hero-reflection"></div>
-        </div>
-
+    <main>
+      <section class="hero-section" id="hero" aria-labelledby="hero-title">
         <div class="hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">
               <span class="status-dot"></span>
-              <span class="fr">En recherche d'une alternance en Data, Business Intelligence ou Systemes d'Information</span>
+              <span class="fr">En recherche d'une alternance en Data, Business Intelligence ou Systèmes d'Information</span>
               <span class="en">Looking for an apprenticeship in Data, Business Intelligence or Information Systems</span>
             </p>
             <h1 id="hero-title">
-              <span class="fr">Transformer les donnees en decisions lisibles, utiles et actionnables.</span>
+              <span class="fr">Transformer les données en décisions lisibles, utiles et actionnables.</span>
               <span class="en">Turning data into readable, useful and actionable decisions.</span>
             </h1>
             <p class="hero-lede">
-              <span class="fr">Je concois des tableaux de bord Power BI, structure les donnees et cree des indicateurs pour aider les equipes metier a piloter leur activite.</span>
+              <span class="fr">Je conçois des tableaux de bord Power BI, structure les données et crée des indicateurs pour aider les équipes métier à piloter leur activité.</span>
               <span class="en">I design Power BI dashboards, structure data and build indicators to help business teams monitor their activity.</span>
             </p>
             <div class="hero-actions">
@@ -103,7 +125,7 @@
                 </small>
               </div>
               <div class="metric">
-                <span class="fr">Competences techniques</span>
+                <span class="fr">Compétences techniques</span>
                 <span class="en">Technical skills</span>
                 <strong>10+</strong>
                 <small>Power BI, SQL, Python, R</small>
@@ -136,49 +158,87 @@
         <div class="section-heading">
           <p class="section-kicker">01 / PROFILE</p>
           <h2 id="profile-title">
-            <span class="fr">Un profil oriente exploitation, qualite et visualisation des donnees.</span>
+            <span class="fr">Un profil orienté exploitation, qualité et visualisation des données.</span>
             <span class="en">A profile focused on data processing, quality and visualization.</span>
           </h2>
         </div>
         <div class="profile-layout">
           <div class="text-panel">
-            <p class="fr">Je suis Justin Walme, etudiant en troisieme annee de BUT Science des Donnees. Mon parcours combine formation statistique, projets appliques et experience en entreprise autour de la Business Intelligence. Chez IMMO Mousquetaires, je participe au developpement de dashboards Power BI, a l'automatisation de flux ETL avec Power Query, a la modelisation des donnees et a la creation de KPI en DAX.</p>
-            <p class="fr">Je suis egalement admissible au Master Management des Systemes d'Information et des Data a l'EMLV, une poursuite d'etudes qui correspond a mon envie de croiser vision metier, pilotage SI et exploitation avancee de la donnee.</p>
-            <p class="fr">Dans cette continuite, je suis actuellement en recherche d'une alternance pour poursuivre mon developpement sur des missions de BI, de preparation de donnees, de reporting et de pilotage par la donnee.</p>
-            <p class="fr">Mon projet professionnel est d'evoluer vers des fonctions liees au pilotage des systemes d'information et de la donnee : consultant BI, analyste SI ou chef de projet data. J'aime relier la technique a la decision : nettoyer, structurer, mesurer, visualiser, puis expliquer.</p>
+            <p class="fr">Je suis Justin Walme, étudiant en troisième année de BUT Science des Données. Mon parcours combine formation statistique, projets appliqués et expérience en entreprise autour de la Business Intelligence. Chez IMMO Mousquetaires, je participe au développement de dashboards Power BI, à l'automatisation de flux ETL avec Power Query, à la modélisation des données et à la création de KPI en DAX.</p>
+            <p class="fr">Je suis également admissible au Master Management des Systèmes d'Information et des Data à l'EMLV, une poursuite d'études qui correspond à mon envie de croiser vision métier, pilotage SI et exploitation avancée de la donnée.</p>
+            <p class="fr">Dans cette continuité, je suis actuellement en recherche d'une alternance pour poursuivre mon développement sur des missions de BI, de préparation de données, de reporting et de pilotage par la donnée.</p>
+            <p class="fr">Mon projet professionnel est d'évoluer vers des fonctions liées au pilotage des systèmes d'information et de la donnée : consultant BI, analyste SI ou chef de projet data. J'aime relier la technique à la décision : nettoyer, structurer, mesurer, visualiser, puis expliquer.</p>
             <p class="en">I am Justin Walme, a third-year Data Science student. My background combines statistical training, applied projects and professional experience in Business Intelligence. At IMMO Mousquetaires, I contribute to Power BI dashboards, ETL automation with Power Query, data modeling and DAX KPI creation.</p>
             <p class="en">I have also been admitted to the Master's program in Management of Information Systems and Data at EMLV, a path aligned with my goal of combining business vision, information systems management and advanced data use.</p>
             <p class="en">In that continuity, I am currently looking for an apprenticeship to keep developing through BI, data preparation, reporting and data-driven management missions.</p>
             <p class="en">My professional goal is to move toward roles connected to information systems and data management: BI consultant, IS analyst or data project manager. I enjoy connecting technical work to decision-making: cleaning, structuring, measuring, visualizing and explaining.</p>
           </div>
-          <div class="focus-list" aria-label="Domaines de specialisation">
+          <div class="focus-list" aria-label="Domaines de spécialisation">
             <article>
               <i data-lucide="database"></i>
               <h3>Data management</h3>
-              <p>ETL, controle qualite, structure de donnees, preparation analytique.</p>
+              <p>ETL, contrôle qualité, structure de données, préparation analytique.</p>
             </article>
             <article>
               <i data-lucide="pie-chart"></i>
               <h3>Business intelligence</h3>
-              <p>Power BI, Power Query, DAX, modelisation, preparation des donnees, reporting et experience utilisateur.</p>
+              <p>Power BI, Power Query, DAX, modélisation, préparation des données, reporting et expérience utilisateur.</p>
             </article>
             <article>
               <i data-lucide="code-2"></i>
               <h3>Analytics coding</h3>
-              <p>Python, SQL, R, DAX et langage M, avec une utilisation forte en complement de la BI notamment sur la preparation des donnees lourdes.</p>
+              <p>Python, SQL, R, DAX et langage M, avec une utilisation forte en complément de la BI notamment sur la préparation des données lourdes.</p>
             </article>
             <article>
               <i data-lucide="presentation"></i>
-              <h3>Communication metier</h3>
-              <p>Restitution orale, redaction de rapports et accompagnement des utilisateurs.</p>
+              <h3>Communication métier</h3>
+              <p>Restitution orale, rédaction de rapports et accompagnement des utilisateurs.</p>
             </article>
           </div>
         </div>
       </section>
 
+      <section class="content-band passions-band" id="passions" aria-labelledby="passions-title">
+        <div class="section-heading">
+          <p class="section-kicker">02 / PERSONAL SIGNALS</p>
+          <h2 id="passions-title">
+            <span class="fr">Au-delà de la data</span>
+            <span class="en">Beyond data</span>
+          </h2>
+          <p class="section-intro fr">Des passions qui nourrissent ma curiosité, ma discipline et mon ouverture.</p>
+          <p class="section-intro en">Passions that fuel my curiosity, discipline and openness.</p>
+        </div>
+        <div class="passions-grid">
+          <article class="passion-card" tabindex="0">
+            <i data-lucide="footprints"></i>
+            <span class="passion-index">01</span>
+            <h3>Sneakers</h3>
+            <p class="fr">Design, culture et attention portée aux détails.</p>
+            <p class="en">Design, culture and attention to detail.</p>
+          </article>
+          <article class="passion-card" tabindex="0">
+            <i data-lucide="dumbbell"></i>
+            <span class="passion-index">02</span>
+            <h3>Sport</h3>
+            <p class="fr">Tennis et entraînement en salle pour la régularité et le dépassement de soi.</p>
+            <p class="en">Tennis and gym training for consistency and self-improvement.</p>
+          </article>
+          <article class="passion-card" tabindex="0">
+            <i data-lucide="plane"></i>
+            <span class="passion-index">03</span>
+            <h3>
+              <span class="fr">Voyage</span>
+              <span class="en">Travel</span>
+            </h3>
+            <p class="fr">Découvrir de nouveaux environnements, cultures et perspectives.</p>
+            <p class="en">Discovering new environments, cultures and perspectives.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="content-band value-band" id="value" aria-labelledby="value-title">
         <div class="section-heading">
-          <p class="section-kicker">02 / VALUE</p>
+          <p class="section-kicker">03 / VALUE</p>
           <h2 id="value-title">
             <span class="fr">Ce que je peux apporter</span>
             <span class="en">What I can bring</span>
@@ -188,17 +248,17 @@
           <div class="value-grid">
             <article class="value-card">
               <i data-lucide="layout-dashboard"></i>
-              <p class="fr">Creer des tableaux de bord Power BI lisibles et utiles aux metiers.</p>
+              <p class="fr">Créer des tableaux de bord Power BI lisibles et utiles aux métiers.</p>
               <p class="en">Create clear and useful Power BI dashboards for business teams.</p>
             </article>
             <article class="value-card">
               <i data-lucide="database-zap"></i>
-              <p class="fr">Nettoyer, structurer et fiabiliser les donnees.</p>
+              <p class="fr">Nettoyer, structurer et fiabiliser les données.</p>
               <p class="en">Clean, structure and improve data reliability.</p>
             </article>
             <article class="value-card">
               <i data-lucide="sigma"></i>
-              <p class="fr">Construire des indicateurs DAX coherents.</p>
+              <p class="fr">Construire des indicateurs DAX cohérents.</p>
               <p class="en">Build consistent DAX indicators.</p>
             </article>
             <article class="value-card">
@@ -208,7 +268,7 @@
             </article>
             <article class="value-card">
               <i data-lucide="messages-square"></i>
-              <p class="fr">Traduire un besoin metier en reporting exploitable.</p>
+              <p class="fr">Traduire un besoin métier en reporting exploitable.</p>
               <p class="en">Turn business needs into usable reporting.</p>
             </article>
           </div>
@@ -216,20 +276,20 @@
           <aside class="experience-card">
             <p class="section-kicker">BUSINESS_INTELLIGENCE</p>
             <h3>
-              <span class="fr">Experience BI en entreprise - IMMO Mousquetaires</span>
+              <span class="fr">Expérience BI en entreprise - IMMO Mousquetaires</span>
               <span class="en">Business Intelligence experience - IMMO Mousquetaires</span>
             </h3>
             <ul class="experience-list">
               <li>
-                <span class="fr">Developpement de tableaux de bord Power BI.</span>
+                <span class="fr">Développement de tableaux de bord Power BI.</span>
                 <span class="en">Power BI dashboard development.</span>
               </li>
               <li>
-                <span class="fr">Modelisation de donnees et structuration de rapports.</span>
+                <span class="fr">Modélisation de données et structuration de rapports.</span>
                 <span class="en">Data modeling and report structuring.</span>
               </li>
               <li>
-                <span class="fr">Creation de mesures et indicateurs en DAX.</span>
+                <span class="fr">Création de mesures et indicateurs en DAX.</span>
                 <span class="en">Creation of DAX measures and indicators.</span>
               </li>
               <li>
@@ -237,7 +297,7 @@
                 <span class="en">Flow automation with Power Query.</span>
               </li>
               <li>
-                <span class="fr">Collaboration avec les equipes metier.</span>
+                <span class="fr">Collaboration avec les équipes métier.</span>
                 <span class="en">Collaboration with business teams.</span>
               </li>
             </ul>
@@ -247,9 +307,9 @@
 
       <section class="content-band alt-band" id="skills" aria-labelledby="skills-title">
         <div class="section-heading">
-          <p class="section-kicker">03 / TECH STACK</p>
+          <p class="section-kicker">04 / TECH STACK</p>
           <h2 id="skills-title">
-            <span class="fr">Competences structurees comme un tableau de bord.</span>
+            <span class="fr">Compétences structurées comme un tableau de bord.</span>
             <span class="en">Skills structured like a dashboard.</span>
           </h2>
         </div>
@@ -286,11 +346,11 @@
               <strong>90</strong>
             </div>
             <div class="skill-row" style="--score: 88%">
-              <span>Nettoyage des donnees</span>
+              <span>Nettoyage des données</span>
               <strong>88</strong>
             </div>
             <div class="skill-row" style="--score: 85%">
-              <span>Qualite des donnees</span>
+              <span>Qualité des données</span>
               <strong>85</strong>
             </div>
             <div class="skill-row" style="--score: 85%">
@@ -316,9 +376,9 @@
 
       <section class="content-band" id="timeline" aria-labelledby="timeline-title">
         <div class="section-heading">
-          <p class="section-kicker">04 / DATA PIPELINE</p>
+          <p class="section-kicker">05 / DATA PIPELINE</p>
           <h2 id="timeline-title">
-            <span class="fr">Un parcours construit comme une montee en competence progressive.</span>
+            <span class="fr">Un parcours construit comme une montée en compétence progressive.</span>
             <span class="en">A path built as a progressive skills pipeline.</span>
           </h2>
         </div>
@@ -327,17 +387,17 @@
           <article class="pipeline-step">
             <span class="step-index">01</span>
             <div>
-              <h3>Baccalaureat scientifique</h3>
-              <p class="fr">Bases solides en mathematiques, logique et raisonnement statistique.</p>
+              <h3>Baccalauréat scientifique</h3>
+              <p class="fr">Bases solides en mathématiques, logique et raisonnement statistique.</p>
               <p class="en">Strong foundations in mathematics, logic and statistical reasoning.</p>
             </div>
           </article>
           <article class="pipeline-step">
             <span class="step-index">02</span>
             <div>
-              <h3>BUT Science des Donnees</h3>
-              <p>IUT Paris Rives de Seine - 2023 a aujourd'hui</p>
-              <p class="fr">ETL, modelisation, visualisation, Python, R, SQL et projets appliques.</p>
+              <h3>BUT Science des Données</h3>
+              <p>IUT Paris Rives de Seine - 2023 à aujourd'hui</p>
+              <p class="fr">ETL, modélisation, visualisation, Python, R, SQL et projets appliqués.</p>
               <p class="en">ETL, modeling, visualization, Python, R, SQL and applied projects.</p>
             </div>
           </article>
@@ -345,8 +405,8 @@
             <span class="step-index">03</span>
             <div>
               <h3>Alternance - Consultant Power BI</h3>
-              <p>IMMO Mousquetaires - 10/2024 a 09/2026</p>
-              <p class="fr">Developpement de dashboards Power BI, schemas en etoile, flux ETL Power Query, mesures DAX et collaboration avec les equipes metier.</p>
+              <p>IMMO Mousquetaires - 10/2024 à 09/2026</p>
+              <p class="fr">Développement de dashboards Power BI, schémas en étoile, flux ETL Power Query, mesures DAX et collaboration avec les équipes métier.</p>
               <p class="en">Power BI dashboards, star schemas, Power Query ETL flows, DAX measures and collaboration with business teams.</p>
             </div>
           </article>
@@ -356,9 +416,9 @@
       <section class="content-band alt-band" id="projects" aria-labelledby="projects-title">
         <div class="section-heading split-heading">
           <div>
-            <p class="section-kicker">05 / PROJECTS</p>
+            <p class="section-kicker">06 / PROJECTS</p>
             <h2 id="projects-title">
-              <span class="fr">Preuves concretes, livrables et methodes.</span>
+              <span class="fr">Preuves concrètes, livrables et méthodes.</span>
               <span class="en">Concrete proof, deliverables and methods.</span>
             </h2>
           </div>
@@ -372,7 +432,7 @@
 
         <div class="project-grid">
           <article class="project-card" data-category="data">
-            <img src="Image/nba_dashboard1.JPG" alt="Apercu du tableau de bord NBA Power BI">
+            <img src="Image/nba_dashboard1.JPG" alt="Aperçu du tableau de bord NBA Power BI">
             <div class="project-body">
               <div class="project-meta-line">
                 <span>Power BI</span>
@@ -380,10 +440,10 @@
                 <span>DAX</span>
               </div>
               <h3>Analyse NBA avec Power BI</h3>
-              <p class="fr">Dashboard Power BI complet integrant nettoyage, modelisation, mesures DAX et analyse comparative des equipes et joueurs NBA.</p>
+              <p class="fr">Dashboard Power BI complet intégrant nettoyage, modélisation, mesures DAX et analyse comparative des équipes et joueurs NBA.</p>
               <p class="en">Complete Power BI dashboard including data cleaning, modeling, DAX measures and comparative analysis of NBA teams and players.</p>
               <button type="button" class="project-link" data-dialog="nbaDialog">
-                <span class="fr">Voir le detail</span>
+                <span class="fr">Voir le détail</span>
                 <span class="en">View details</span>
                 <i data-lucide="arrow-up-right"></i>
               </button>
@@ -391,18 +451,18 @@
           </article>
 
           <article class="project-card" data-category="data">
-            <img src="Image/SNCF-p1.jpeg" alt="Apercu du tableau de bord SNCF">
+            <img src="Image/SNCF-p1.jpeg" alt="Aperçu du tableau de bord SNCF">
             <div class="project-body">
               <div class="project-meta-line">
                 <span>Power BI</span>
                 <span>Excel</span>
                 <span>ETL</span>
               </div>
-              <h3>Etude SNCF - incidents materiel roulant</h3>
-              <p class="fr">Tableau de bord Power BI sur les incidents materiels SNCF : nettoyage des donnees, suivi des temps de resolution, analyse des defaillances et construction d'indicateurs de pilotage.</p>
+              <h3>Étude SNCF - incidents matériel roulant</h3>
+              <p class="fr">Tableau de bord Power BI sur les incidents matériels SNCF : nettoyage des données, suivi des temps de résolution, analyse des défaillances et construction d'indicateurs de pilotage.</p>
               <p class="en">Power BI dashboard on SNCF equipment incidents: data cleaning, resolution time monitoring, failure analysis and management indicators.</p>
               <button type="button" class="project-link" data-dialog="sncfDialog">
-                <span class="fr">Voir le detail</span>
+                <span class="fr">Voir le détail</span>
                 <span class="en">View details</span>
                 <i data-lucide="arrow-up-right"></i>
               </button>
@@ -417,11 +477,11 @@
                 <span>DAX</span>
                 <span>Data Viz</span>
               </div>
-              <h3>Insertion professionnelle des diplomes</h3>
-              <p class="fr">Tableau de bord interactif sur l'insertion des diplomes : taux d'emploi, secteurs, remunerations, poursuite d'etudes et indicateurs de decision.</p>
+              <h3>Insertion professionnelle des diplômés</h3>
+              <p class="fr">Tableau de bord interactif sur l'insertion des diplômés : taux d'emploi, secteurs, rémunérations, poursuite d'études et indicateurs de décision.</p>
               <p class="en">Interactive dashboard on graduate employment: employment rates, sectors, salaries, further studies and decision-making indicators.</p>
               <button type="button" class="project-link" data-dialog="insertionDialog">
-                <span class="fr">Voir le detail</span>
+                <span class="fr">Voir le détail</span>
                 <span class="en">View details</span>
                 <i data-lucide="arrow-up-right"></i>
               </button>
@@ -436,11 +496,11 @@
                 <span>Finance</span>
                 <span>DAX</span>
               </div>
-              <h3>Analyse du marche du Bitcoin</h3>
-              <p class="fr">Rapport Power BI sur l'evolution du Bitcoin : tendances historiques, variations, volatilite et indicateurs financiers interactifs.</p>
+              <h3>Analyse du marché du Bitcoin</h3>
+              <p class="fr">Rapport Power BI sur l'évolution du Bitcoin : tendances historiques, variations, volatilité et indicateurs financiers interactifs.</p>
               <p class="en">Power BI report on Bitcoin evolution: historical trends, variations, volatility and interactive financial indicators.</p>
               <button type="button" class="project-link" data-dialog="bitcoinDialog">
-                <span class="fr">Voir le detail</span>
+                <span class="fr">Voir le détail</span>
                 <span class="en">View details</span>
                 <i data-lucide="arrow-up-right"></i>
               </button>
@@ -455,11 +515,11 @@
                 <span>CSS</span>
                 <span>UX</span>
               </div>
-              <h3>Creation de l'e-portfolio</h3>
-              <p class="fr">Conception d'un portfolio numerique responsive : structure de page, ergonomie, accessibilite, identite visuelle et mise en valeur des projets.</p>
+              <h3>Création de l'e-portfolio</h3>
+              <p class="fr">Conception d'un portfolio numérique responsive : structure de page, ergonomie, accessibilité, identité visuelle et mise en valeur des projets.</p>
               <p class="en">Design of a responsive digital portfolio: page structure, usability, accessibility, visual identity and project presentation.</p>
               <button type="button" class="project-link" data-dialog="portfolioDialog">
-                <span class="fr">Voir le detail</span>
+                <span class="fr">Voir le détail</span>
                 <span class="en">View details</span>
                 <i data-lucide="arrow-up-right"></i>
               </button>
@@ -475,10 +535,10 @@
                 <span>Video</span>
               </div>
               <h3>Animation - Apprendre une langue</h3>
-              <p class="fr">Projet de communication combinant recherche, storyboard et montage pour deconstruire un stereotype sur l'apprentissage des langues.</p>
+              <p class="fr">Projet de communication combinant recherche, storyboard et montage pour déconstruire un stéréotype sur l'apprentissage des langues.</p>
               <p class="en">Communication project combining research, storyboard and editing to challenge a stereotype about language learning.</p>
               <button type="button" class="project-link" data-dialog="animationDialog">
-                <span class="fr">Voir le detail</span>
+                <span class="fr">Voir le détail</span>
                 <span class="en">View details</span>
                 <i data-lucide="arrow-up-right"></i>
               </button>
@@ -490,9 +550,9 @@
 
       <section class="content-band contact-band" id="contact" aria-labelledby="contact-title">
         <div class="section-heading">
-          <p class="section-kicker">06 / CONTACT</p>
+          <p class="section-kicker">07 / CONTACT</p>
           <h2 id="contact-title">
-            <span class="fr">Disponible pour echanger autour d'une opportunite en Data, BI ou Systemes d'Information.</span>
+            <span class="fr">Disponible pour échanger autour d'une opportunité en Data, BI ou Systèmes d'Information.</span>
             <span class="en">Available to discuss an opportunity in Data, BI or Information Systems.</span>
           </h2>
         </div>
@@ -502,12 +562,12 @@
             <span>walmejustin@gmail.com</span>
           </a>
           <a href="https://www.linkedin.com/in/justin-walme-4ab0a62b7" target="_blank" rel="noreferrer">
-            <i data-lucide="linkedin"></i>
+            <i data-lucide="external-link"></i>
             <span>LinkedIn</span>
           </a>
           <a href="document/CV_Justin_WALME.pdf" download>
             <i data-lucide="file-text"></i>
-            <span class="fr">CV francais</span>
+            <span class="fr">CV français</span>
             <span class="en">French resume</span>
           </a>
           <a href="document/CV_Justin_WALME_Anglais.pdf" download>
@@ -525,7 +585,7 @@
           <div class="form-intro">
             <span class="section-kicker">MESSAGE_INPUT</span>
             <h3>
-              <span class="fr">Proposer un echange</span>
+              <span class="fr">Proposer un échange</span>
               <span class="en">Suggest a conversation</span>
             </h3>
           </div>
@@ -537,7 +597,7 @@
             </label>
             <label>
               Email
-              <input type="email" name="email" autocomplete="email">
+              <input type="email" name="email" autocomplete="email" required>
             </label>
           </div>
           <label>
@@ -556,24 +616,27 @@
 
     <footer class="site-footer">
       <span>Justin Walme - Data Science Portfolio</span>
-      <a href="#top">Back to top</a>
+      <a href="#top">
+        <span class="fr">Retour en haut</span>
+        <span class="en">Back to top</span>
+      </a>
     </footer>
   </div>
 
   <dialog class="project-dialog" id="nbaDialog">
     <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
     <h2>Analyse NBA avec Power BI</h2>
-    <p class="fr">Dashboard Power BI complet integrant nettoyage, modelisation, mesures DAX et analyse comparative des equipes et joueurs NBA.</p>
+    <p class="fr">Dashboard Power BI complet intégrant nettoyage, modélisation, mesures DAX et analyse comparative des équipes et joueurs NBA.</p>
     <p class="en">Complete Power BI dashboard including data cleaning, modeling, DAX measures and comparative analysis of NBA teams and players.</p>
     <div class="dialog-video">
       <video controls preload="metadata" poster="Image/nba_dashboard1.JPG" playsinline>
         <source src="https://github.com/JW0310/E-portfolio/releases/download/assets-v2/Demo.PBI.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture video HTML5.
+        Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
       </video>
     </div>
     <div class="dialog-actions">
       <a href="document/Rapport_SAE_SID.pbix" download>
-        <span class="fr">Telecharger le fichier</span>
+        <span class="fr">Télécharger le fichier</span>
         <span class="en">Download file</span>
       </a>
       <a href="document/Rapport SAE SID.pdf" download>
@@ -585,8 +648,8 @@
 
   <dialog class="project-dialog" id="portfolioDialog">
     <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
-    <h2>Creation de l'e-portfolio</h2>
-    <p class="fr">Conception d'un portfolio numerique responsive : structure de page, ergonomie, accessibilite, identite visuelle et mise en valeur des projets.</p>
+    <h2>Création de l'e-portfolio</h2>
+    <p class="fr">Conception d'un portfolio numérique responsive : structure de page, ergonomie, accessibilité, identité visuelle et mise en valeur des projets.</p>
     <p class="en">Design of a responsive digital portfolio: page structure, usability, accessibility, visual identity and project presentation.</p>
     <div class="dialog-image-row">
       <img src="Image/architecture.JPG" alt="Architecture du site">
@@ -596,8 +659,8 @@
 
   <dialog class="project-dialog" id="sncfDialog">
     <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
-    <h2>Etude SNCF - incidents et defauts du materiel roulant</h2>
-    <p class="fr">Tableau de bord Power BI sur les incidents materiels SNCF : nettoyage des donnees, suivi des temps de resolution, analyse des defaillances et construction d'indicateurs de pilotage.</p>
+    <h2>Étude SNCF - incidents et défauts du matériel roulant</h2>
+    <p class="fr">Tableau de bord Power BI sur les incidents matériels SNCF : nettoyage des données, suivi des temps de résolution, analyse des défaillances et construction d'indicateurs de pilotage.</p>
     <p class="en">Power BI dashboard on SNCF equipment incidents: data cleaning, resolution time monitoring, failure analysis and management indicators.</p>
     <div class="dialog-image-row report-gallery">
       <img src="Image/SNCF-p1.jpeg" alt="Page 1 du tableau de bord SNCF">
@@ -606,7 +669,7 @@
     </div>
     <div class="dialog-actions">
       <a href="#contact">
-        <span class="fr">Proposer un echange</span>
+        <span class="fr">Proposer un échange</span>
         <span class="en">Suggest a conversation</span>
       </a>
     </div>
@@ -614,8 +677,8 @@
 
   <dialog class="project-dialog" id="insertionDialog">
     <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
-    <h2>Analyse de l'insertion professionnelle des diplomes</h2>
-    <p class="fr">Projet de Data Visualisation visant a transformer un jeu de donnees complexe en outil d'aide a la decision. Le rapport permet d'analyser les taux d'insertion, les secteurs professionnels, les remunerations, la poursuite d'etudes et differents profils de diplomes.</p>
+    <h2>Analyse de l'insertion professionnelle des diplômés</h2>
+    <p class="fr">Projet de Data Visualisation visant à transformer un jeu de données complexe en outil d'aide à la décision. Le rapport permet d'analyser les taux d'insertion, les secteurs professionnels, les rémunérations, la poursuite d'études et différents profils de diplômés.</p>
     <p class="en">Data Visualization project turning a complex dataset into a decision-support tool. The report analyzes employment rates, professional sectors, salaries, further studies and different graduate profiles.</p>
     <div class="dialog-image-row report-gallery">
       <img src="Image/Inser pro page 1.png" alt="Page 1 du rapport insertion professionnelle">
@@ -625,8 +688,8 @@
 
   <dialog class="project-dialog" id="bitcoinDialog">
     <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
-    <h2>Analyse du marche du Bitcoin</h2>
-    <p class="fr">Rapport interactif sur l'evolution du Bitcoin a partir de donnees financieres historiques. Le dashboard met en evidence les tendances, les periodes de croissance ou de correction, la volatilite et les principaux indicateurs financiers.</p>
+    <h2>Analyse du marché du Bitcoin</h2>
+    <p class="fr">Rapport interactif sur l'évolution du Bitcoin à partir de données financières historiques. Le dashboard met en évidence les tendances, les périodes de croissance ou de correction, la volatilité et les principaux indicateurs financiers.</p>
     <p class="en">Interactive report on Bitcoin evolution based on historical financial data. The dashboard highlights trends, growth and correction periods, volatility and key financial indicators.</p>
     <div class="dialog-image-row report-gallery">
       <img src="Image/BTC page 1.png" alt="Page 1 du rapport Bitcoin">
@@ -637,13 +700,13 @@
 
   <dialog class="project-dialog" id="animationDialog">
     <button class="dialog-close" type="button" data-close aria-label="Fermer"><i data-lucide="x"></i></button>
-    <h2>Animation - Faut-il etre jeune pour apprendre une langue ?</h2>
-    <p class="fr">Projet de communication combinant recherche, storyboard et montage pour deconstruire un stereotype sur l'apprentissage des langues.</p>
+    <h2>Animation - Faut-il être jeune pour apprendre une langue ?</h2>
+    <p class="fr">Projet de communication combinant recherche, storyboard et montage pour déconstruire un stéréotype sur l'apprentissage des langues.</p>
     <p class="en">Communication project combining research, storyboard and editing to challenge a stereotype about language learning.</p>
     <div class="dialog-video">
       <video controls preload="metadata" poster="Image/animation_poster.png" playsinline>
         <source src="https://github.com/JW0310/E-portfolio/releases/download/assets-v1/Animation.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture video HTML5.
+        Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
       </video>
     </div>
     <div class="dialog-actions">
@@ -661,11 +724,46 @@
     const filterButtons = document.querySelectorAll('[data-filter]');
     const projectCards = document.querySelectorAll('.project-card');
     const dialogButtons = document.querySelectorAll('[data-dialog]');
+    const scrollVideo = document.querySelector('#scrollVideo');
+    const scrollVideoLayer = document.querySelector('#scrollVideoLayer');
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const scrollVideoSegments = [
+      { section: '#top', start: 0.00, end: 0.18 },
+      { section: '#profile', start: 0.18, end: 0.32 },
+      { section: '#passions', start: 0.32, end: 0.48 },
+      { section: '#value', start: 0.48, end: 0.58 },
+      { section: '#skills', start: 0.58, end: 0.70 },
+      { section: '#timeline', start: 0.70, end: 0.82 },
+      { section: '#projects', start: 0.82, end: 0.93 },
+      { section: '#contact', start: 0.93, end: 1.00 }
+    ];
+
+    let scrollSegmentRanges = [];
+    let scrollFrame = 0;
+    let scrubFrame = 0;
+    let layoutFrame = 0;
+    let targetVideoTime = 0;
+    let frozenVideoTime = 0;
+    let videoMetadataReady = false;
+    let videoScrubbingFrozen = false;
+
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const lowCapacityMobile = window.innerWidth <= 480
+      && ((connection && connection.saveData) || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4));
+
+    function usesStaticVideo() {
+      return reducedMotionQuery.matches || lowCapacityMobile;
+    }
 
     function setLanguage(lang) {
       root.dataset.lang = lang;
       root.lang = lang;
       languageToggle.querySelector('span').textContent = lang === 'fr' ? 'EN' : 'FR';
+      languageToggle.setAttribute('aria-label', lang === 'fr' ? 'Passer le site en anglais' : 'Switch the website to French');
+      document.querySelector('.topbar').setAttribute('aria-label', lang === 'fr' ? 'Navigation principale' : 'Main navigation');
+      document.querySelector('.main-nav').setAttribute('aria-label', lang === 'fr' ? 'Sections du portfolio' : 'Portfolio sections');
+      queueLayoutRefresh();
     }
 
     languageToggle.addEventListener('click', () => {
@@ -679,13 +777,24 @@
         projectCards.forEach((card) => {
           card.hidden = filter !== 'all' && card.dataset.category !== filter;
         });
+        queueLayoutRefresh();
       });
     });
 
     dialogButtons.forEach((button) => {
       button.addEventListener('click', () => {
         const dialog = document.getElementById(button.dataset.dialog);
-        if (dialog) dialog.showModal();
+        if (dialog) {
+          if (scrubFrame) {
+            window.cancelAnimationFrame(scrubFrame);
+            scrubFrame = 0;
+          }
+          frozenVideoTime = scrollVideo.currentTime;
+          targetVideoTime = frozenVideoTime;
+          videoScrubbingFrozen = true;
+          dialog.showModal();
+          scrollVideo.currentTime = frozenVideoTime;
+        }
       });
     });
 
@@ -697,34 +806,169 @@
       dialog.addEventListener('click', (event) => {
         if (event.target === dialog) dialog.close();
       });
+      dialog.addEventListener('close', () => {
+        videoScrubbingFrozen = false;
+        queueLayoutRefresh();
+      });
     });
 
     const animatedItems = document.querySelectorAll(
-      '.hero-copy, .command-panel, .content-band, .focus-list article, .value-card, .experience-card, .skills-column, .language-panel, .pipeline-step, .project-card, .contact-grid a, .contact-form'
+      '.hero-copy, .command-panel, .section-heading, .text-panel, .focus-list article, .passion-card, .value-card, .experience-card, .skills-column, .language-panel, .pipeline-step, .project-card, .contact-grid a, .contact-form'
     );
-    animatedItems.forEach((item, index) => {
-      item.classList.add('scroll-reveal');
-      item.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 70}ms`);
+
+    if ('IntersectionObserver' in window && !reducedMotionQuery.matches) {
+      animatedItems.forEach((item, index) => {
+        item.classList.add('scroll-reveal');
+        item.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 70}ms`);
+      });
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('is-visible', entry.isIntersecting);
+        });
+      }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+
+      animatedItems.forEach((item) => revealObserver.observe(item));
+    }
+
+    function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+    }
+
+    function rebuildScrollSegments() {
+      const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      const viewportLead = Math.min(window.innerHeight * 0.3, 240);
+
+      scrollSegmentRanges = scrollVideoSegments.map((segment, index) => {
+        const element = document.querySelector(segment.section);
+        const documentTop = element ? element.getBoundingClientRect().top + window.scrollY : 0;
+        const scrollStart = index === 0 ? 0 : clamp(documentTop - viewportLead, 0, maxScroll);
+
+        return { ...segment, scrollStart };
+      });
+
+      scrollSegmentRanges.forEach((segment, index) => {
+        const nextSegment = scrollSegmentRanges[index + 1];
+        segment.scrollEnd = nextSegment ? Math.max(segment.scrollStart + 1, nextSegment.scrollStart) : maxScroll;
+      });
+    }
+
+    function getMappedVideoProgress(scrollPosition) {
+      if (!scrollSegmentRanges.length) rebuildScrollSegments();
+
+      const activeSegment = [...scrollSegmentRanges]
+        .reverse()
+        .find((segment) => scrollPosition >= segment.scrollStart) || scrollSegmentRanges[0];
+      const scrollRange = Math.max(1, activeSegment.scrollEnd - activeSegment.scrollStart);
+      const localProgress = clamp((scrollPosition - activeSegment.scrollStart) / scrollRange, 0, 1);
+
+      return activeSegment.start + localProgress * (activeSegment.end - activeSegment.start);
+    }
+
+    function animateVideoScrub() {
+      scrubFrame = 0;
+      if (!videoMetadataReady || videoScrubbingFrozen || usesStaticVideo()) return;
+
+      const delta = targetVideoTime - scrollVideo.currentTime;
+      if (Math.abs(delta) < 0.012) {
+        scrollVideo.currentTime = targetVideoTime;
+        return;
+      }
+
+      scrollVideo.currentTime += delta * 0.28;
+      scrubFrame = window.requestAnimationFrame(animateVideoScrub);
+    }
+
+    function updateScrollState() {
+      scrollFrame = 0;
+      const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      const globalProgress = maxScroll > 0 ? clamp(window.scrollY / maxScroll, 0, 1) : 0;
+      root.style.setProperty('--scroll-progress', globalProgress.toFixed(4));
+
+      if (!videoMetadataReady || videoScrubbingFrozen || usesStaticVideo()) return;
+
+      const mappedProgress = getMappedVideoProgress(window.scrollY);
+      targetVideoTime = clamp(mappedProgress * scrollVideo.duration, 0, Math.max(0, scrollVideo.duration - 0.02));
+
+      if (!scrubFrame) {
+        scrubFrame = window.requestAnimationFrame(animateVideoScrub);
+      }
+    }
+
+    function queueScrollUpdate() {
+      if (!scrollFrame) {
+        scrollFrame = window.requestAnimationFrame(updateScrollState);
+      }
+    }
+
+    function queueLayoutRefresh() {
+      if (layoutFrame) window.cancelAnimationFrame(layoutFrame);
+      layoutFrame = window.requestAnimationFrame(() => {
+        layoutFrame = 0;
+        rebuildScrollSegments();
+        queueScrollUpdate();
+      });
+    }
+
+    function alignInitialHash() {
+      if (!window.location.hash) return;
+      const target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+      if (!target) return;
+
+      const previousScrollBehavior = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      target.scrollIntoView({ block: 'start' });
+      root.style.scrollBehavior = previousScrollBehavior;
+      queueLayoutRefresh();
+    }
+
+    function initializeScrollVideo() {
+      if (videoMetadataReady) return;
+      scrollVideo.pause();
+      videoMetadataReady = true;
+      root.classList.toggle('scroll-video-static', usesStaticVideo());
+      queueLayoutRefresh();
+    }
+
+    scrollVideo.addEventListener('loadedmetadata', initializeScrollVideo);
+    if (scrollVideo.readyState >= 1) initializeScrollVideo();
+
+    scrollVideo.addEventListener('error', () => {
+      scrollVideoLayer.classList.add('has-error');
     });
 
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        entry.target.classList.toggle('is-visible', entry.isIntersecting);
-      });
-    }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+    function handleReducedMotionChange() {
+      root.classList.toggle('scroll-video-static', usesStaticVideo());
+      if (scrubFrame) {
+        window.cancelAnimationFrame(scrubFrame);
+        scrubFrame = 0;
+      }
+      queueLayoutRefresh();
+    }
 
-    animatedItems.forEach((item) => revealObserver.observe(item));
+    if (typeof reducedMotionQuery.addEventListener === 'function') {
+      reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
+    } else {
+      reducedMotionQuery.addListener(handleReducedMotionChange);
+    }
 
-    const updateScrollState = () => {
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
-      root.style.setProperty('--scroll-progress', progress.toFixed(4));
-      root.style.setProperty('--scroll-shift', `${Math.round(window.scrollY * -0.08)}px`);
-    };
-    updateScrollState();
-    window.addEventListener('scroll', updateScrollState, { passive: true });
+    window.addEventListener('scroll', queueScrollUpdate, { passive: true });
+    window.addEventListener('resize', queueLayoutRefresh, { passive: true });
+    window.addEventListener('hashchange', queueLayoutRefresh);
+    window.addEventListener('load', () => {
+      alignInitialHash();
+      queueLayoutRefresh();
+    });
+    window.addEventListener('pageshow', queueLayoutRefresh);
+
+    if ('ResizeObserver' in window) {
+      const layoutObserver = new ResizeObserver(queueLayoutRefresh);
+      layoutObserver.observe(document.querySelector('.page-shell'));
+    }
 
     setLanguage('fr');
+    root.classList.toggle('scroll-video-static', usesStaticVideo());
+    queueLayoutRefresh();
     if (window.lucide) {
       window.lucide.createIcons();
     }
